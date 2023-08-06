@@ -12,7 +12,7 @@ header{
     display: inline-block;
     line-height: 72px;
     margin-bottom: 20px;
-
+    
 }
 p{
     margin-top: 0;
@@ -37,13 +37,13 @@ p{
 }
 .weatherforcastbox{
     position: relative;
-    width: 12%;
+    width: 11%;
     left: 10px;
     border: 3px double #2f2f2f;
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
-    margin: 0 50px 20px -360px;
+    margin: 0 50px 20px -265px;
 }
 .content{
     font-size: 0;
