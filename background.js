@@ -2,7 +2,7 @@ var PARTICLE_NUM = 400;
 var PARTICLE_BASE_RADIUS = 0.2;
 var FL = 500;
 var DEFAULT_SPEED = 2;
-var BOOST_SPEED = 300;
+var BOOST_SPEED = 200;
 
 var canvas;
 var canvasWidth, canvasHeight;
