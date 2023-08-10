@@ -486,7 +486,7 @@ p{
 
 
 /* Dark mode */
-.dark-mode body {
+.dark-mode {
     background-color: hsl(0, 0%, 0%);
     color: #ffffff;
     z-index: 9999;
