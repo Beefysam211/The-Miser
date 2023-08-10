@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
     canvas = document.getElementById('c');
     
     var resize = function() {
-        canvasWidth  = canvas.width = window.innerWidth * 0.989;
+        canvasWidth  = canvas.width = window.innerWidth * 0.9899;
         canvasHeight = canvas.height = window.innerHeight * 1.9;
         centerX = canvasWidth * 0.5;
         centerY = canvasHeight * 0.5;
