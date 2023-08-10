@@ -455,6 +455,35 @@ p{
   /* Your styles for 4K and above resolution */
 }
 
+/* Common mobile-first breakpoints */
+
+/* Small screens (portrait phones) */
+@media (max-width: 480px) {
+  /* Your styles for small screens */
+}
+
+/* Medium screens (landscape phones and small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Your styles for medium screens */
+}
+
+/* Tablets and larger screens */
+
+/* Portrait tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Your styles for portrait tablets */
+}
+
+/* Landscape tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  /* Your styles for landscape tablets and small desktops */
+}
+
+/* Large desktops and beyond */
+@media (min-width: 1201px) {
+  /* Your styles for large desktops and beyond */
+}
+
 
 /* Dark mode */
 .dark-mode body {
