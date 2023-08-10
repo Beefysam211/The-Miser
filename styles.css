@@ -429,6 +429,33 @@ p{
   }
 }
 
+/* Standard desktop */
+@media (min-width: 1024px) {
+  /* Your styles for standard desktop resolution */
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  /* Your styles for large desktop resolution */
+}
+
+/* Extra large desktop */
+@media (min-width: 1920px) {
+  /* Your styles for extra large desktop resolution */
+}
+
+/* High DPI (Retina) screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  /* Your styles for high DPI screens */
+}
+
+/* 4K and above */
+@media (min-width: 2560px) and (min-height: 1440px) {
+  /* Your styles for 4K and above resolution */
+}
+
+
 /* Dark mode */
 .dark-mode body {
     background-color: hsl(0, 0%, 0%);
