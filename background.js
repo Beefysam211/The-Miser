@@ -1,5 +1,5 @@
-var PARTICLE_NUM = 500;
-var PARTICLE_BASE_RADIUS = 0.5;
+var PARTICLE_NUM = 400;
+var PARTICLE_BASE_RADIUS = 0.2;
 var FL = 500;
 var DEFAULT_SPEED = 2;
 var BOOST_SPEED = 300;
@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
     canvas = document.getElementById('c');
     
     var resize = function() {
-        canvasWidth  = canvas.width = window.innerWidth * 0.98;
+        canvasWidth  = canvas.width = window.innerWidth * 0.989;
         canvasHeight = canvas.height = window.innerHeight * 1.9;
         centerX = canvasWidth * 0.5;
         centerY = canvasHeight * 0.5;
