@@ -94,7 +94,7 @@ p{
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
-    margin: 0 50px 20px -265px;
+    margin: -18px 50px 20px -265px;
     z-index: 9999;
 }
 .content{
@@ -531,7 +531,7 @@ p{
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
-    margin: 0 50px 20px -265px;
+    margin: -18px 50px 20px -265px;
     z-index: 9999;
 }
 .dark-mode .content{
