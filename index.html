@@ -23,9 +23,22 @@
     </div>
 
     <div class="subhead" id="date">
-        <script>
-        document.getElementById("date").innerHTML = Date();
-        </script></div>
+        <script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+display_c();
+ }
+</script>
+</head>
+
+<body onload=display_ct();>
+<span id='ct' ></span></div>
 </div>
 <div class="content">
     <div class="collumns">
