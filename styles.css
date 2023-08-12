@@ -88,13 +88,13 @@ p{
 }
 .weatherforcastbox{
     position: relative;
-    width: 11%;
+    width: 25%;
     left: 10px;
     border: 3px double #000000;
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
-    margin: -18px 50px 20px -265px;
+    margin: -18px 50px 20px -475px;
     z-index: 9999;
 }
 .content{
@@ -525,13 +525,13 @@ p{
 }
 .dark-mode .weatherforcastbox{
     position: relative;
-    width: 11%;
+    width: 25%;
     left: 10px;
     border: 3px double #ffffff;
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
-    margin: -18px 50px 20px -265px;
+    margin: -18px 50px 20px -475px;
     z-index: 9999;
 }
 .dark-mode .content{
