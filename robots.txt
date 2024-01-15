@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 10
+Allow: /
+
+Sitemap: http://www.themiser.web.app/sitemap.xml
