@@ -338,6 +338,15 @@ html::-webkit-scrollbar-button {
 }
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+      background-color: white;
+      color: black;
+  }
+}
+
 @media only all and (max-width: 1300px) {
   .weatherforcastbox {
     display: none;
@@ -824,6 +833,15 @@ html::-webkit-scrollbar-button {
 }
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+      color: white;
+  }
+}
+
 @media only all and (max-width: 1300px) {
   .dark-mode .weatherforcastbox {
     display: none;
