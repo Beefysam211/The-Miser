@@ -178,7 +178,6 @@ function Particle(x, y, z) {
 
 // Event listener for window load
 window.addEventListener("load", function () {
-  // ... (existing code)
 
   // Get the dark mode preference from local storage
   const darkModePreference = localStorage.getItem("darkMode");
@@ -202,39 +201,55 @@ window.addEventListener("load", function () {
 
 });
 
+// Get the dark mode preference from local storage
+const darkModePreference = localStorage.getItem("darkMode");
+
+// Set initial dark mode state based on the preference
+if (darkModePreference === "true") {
+  isDarkMode = true;
+  // Ensure the mode toggle is checked
+  modeToggle.checked = true;
+}
+// Apply the dark mode to the body
+document.body.classList.toggle("dark-mode", isDarkMode);
+
+// Event listener for mode toggle
+modeToggle.addEventListener("change", function () {
+  // Toggle the class on the body element
+  document.body.classList.toggle("dark-mode", modeToggle.checked);
+  // Update the dark mode preference in local storage
+  localStorage.setItem("darkMode", modeToggle.checked);
+});
+
+// Function to check system theme preference
+function checkSystemTheme() {
+  // Dark mode auto-detection based on system theme
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    // Automatically enable dark mode if system theme is dark
+    isDarkMode = true;
+    document.body.classList.add("dark-mode");
+    modeToggle.checked = true;
+  }
+}
+
+// Call the function to check system theme preference
+checkSystemTheme();
 // Event listener for window load
 window.addEventListener("load", function () {
 
   // Get the dark mode preference from local storage
   const darkModePreference = localStorage.getItem("darkMode");
 
-  // Set initial dark mode state based on the preference or system theme
-  isDarkMode = darkModePreference === "true" || window.matchMedia("(prefers-color-scheme: dark)").matches;
-
+  // Set initial dark mode state based on the preference
+  if (darkModePreference === "true") {
+    isDarkMode = true;
+    // Ensure the mode toggle is checked
+    modeToggle.checked = true;
+  } else if (darkModePreference === "false") {
+    isDarkMode = false;
+    // Ensure the mode toggle is unchecked
+    modeToggle.checked = false;
+  }
   // Apply the dark mode to the body
   document.body.classList.toggle("dark-mode", isDarkMode);
-
-  // Update the mode toggle state
-  modeToggle.checked = isDarkMode;
-
-  // Event listener for mode toggle
-  modeToggle.addEventListener("change", function () {
-    // Toggle the class on the body element
-    document.body.classList.toggle("dark-mode", modeToggle.checked);
-    // Update the dark mode preference in local storage
-    localStorage.setItem("darkMode", modeToggle.checked);
-  });
-
-  // Event listener for system theme change
-  window.matchMedia("(prefers-color-scheme: dark)").addListener((e) => {
-    // Update dark mode based on system theme
-    isDarkMode = e.matches;
-    // Apply the dark mode to the body
-    document.body.classList.toggle("dark-mode", isDarkMode);
-    // Update the mode toggle state
-    modeToggle.checked = isDarkMode;
-  });
-
 });
-
-
