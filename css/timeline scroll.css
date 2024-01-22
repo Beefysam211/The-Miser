@@ -338,22 +338,6 @@ section {
 
 /*MEDIAQUERIES*/
 
-/* Light mode */
-@media (prefers-color-scheme: light) {
-  body {
-      background-color: white;
-      color: black;
-  }
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-      background-color: black;
-      color: white;
-  }
-}
-
 @media only all and (max-width: 1300px) {
   .weatherforcastbox{
       display: none;
