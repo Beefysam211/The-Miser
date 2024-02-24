@@ -49,41 +49,105 @@
     <div class="headerobjectswrapper">
       <div class="weatherforcastbox">
         <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow"
-              target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-            async> {"symbols": [
-                {
-                  "proName": "FOREXCOM:SPXUSD",
-                  "title": "S&P 500"
-                },
-                {
-                  "proName": "FOREXCOM:NSXUSD",
-                  "title": "US 100"
-                },
-                {
-                  "proName": "FX_IDC:EURUSD",
-                  "title": "EUR to USD"
-                },
-                {
-                  "proName": "BITSTAMP:BTCUSD",
-                  "title": "Bitcoin"
-                },
-                {
-                  "proName": "BITSTAMP:ETHUSD",
-                  "title": "Ethereum"
-                }
-              ],
-              "colorTheme": "light",
-              "isTransparent": 0,
-              "showSymbolLogo": 1,
-              "locale": "in"
-            }
-            </script>
-        </div>
-        <!-- TradingView Widget END -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "india gdp",
+      "proName": "ECONOMICS:INGDP"
+    },
+    {
+      "description": "nvidia",
+      "proName": "NASDAQ:NVDA"
+    },
+    {
+      "description": "tesla",
+      "proName": "NASDAQ:TSLA"
+    },
+    {
+      "description": "apple",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "amazon",
+      "proName": "NASDAQ:AMZN"
+    },
+    {
+      "description": "meta",
+      "proName": "NASDAQ:META"
+    },
+    {
+      "description": "microsoft",
+      "proName": "NASDAQ:MSFT"
+    },
+    {
+      "description": "amd",
+      "proName": "NASDAQ:AMD"
+    },
+    {
+      "description": "netflix",
+      "proName": "NASDAQ:NFLX"
+    },
+    {
+      "description": "google",
+      "proName": "NASDAQ:GOOGL"
+    },
+    {
+      "description": "nike",
+      "proName": "NYSE:NKE"
+    },
+    {
+      "description": "oracle",
+      "proName": "NYSE:ORCL"
+    },
+    {
+      "description": "ibm",
+      "proName": "NYSE:IBM"
+    },
+    {
+      "description": "mcdonalds",
+      "proName": "NYSE:MCD"
+    },
+    {
+      "description": "electronic arts",
+      "proName": "NASDAQ:EA"
+    },
+    {
+      "description": "uber",
+      "proName": "NYSE:UBER"
+    },
+    {
+      "description": "nasdaq",
+      "proName": "NASDAQ:NDAQ"
+    },
+    {
+      "description": "twitter",
+      "proName": "NYSE:TWTR"
+    }
+  ],
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "locale": "in"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
       </div>
 
       <a href="/">
