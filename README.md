@@ -1,4 +1,4 @@
-![image](https://github.com/Beefysam211/The-Miser/assets/84408620/730132b8-269b-4df4-9387-8a3e2b50bc80)
+![image](https://github.com/Beefysam211/The-Miser/assets/84408620/c0e6f5b8-1600-4203-840a-f0bab105d70c)
 
 
 https://github.com/Beefysam211/The-Miser/assets/84408620/f5f31efe-4548-4f36-976b-5f1d80e270e2
