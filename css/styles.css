@@ -10,13 +10,12 @@ a {
   color: black;
 }
 
-/*
-  📣 Note: all sizes are in ems, so change the .toggle font-size to
-  scale to whatever size you need.
-*/
-
 .toggle {
-  font-size: 0.8rem; /* 👈 change this to scale */
+  /*
+  Note: all sizes are in ems, so change the .toggle font-size to
+  scale to whatever size you need.
+  */
+  font-size: 0.8rem; /* change this to scale */
   border: .125em solid currentColor;
   border-radius: 2em;
   cursor: pointer;
@@ -71,19 +70,6 @@ a {
 input:checked ~ .toggle span {
   left: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sr-only {
   position: absolute;
