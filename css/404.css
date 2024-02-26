@@ -111,3 +111,17 @@ a::before {
 a::after {
   content: "]";
 }
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html::-webkit-scrollbar-track {
+  background-color: #000;
+}
+html::-webkit-scrollbar-thumb {
+  background: #4e4e4e;
+  border-radius: 25px;
+}
+html::-webkit-scrollbar-corner {
+  background-color: #000;
+}
