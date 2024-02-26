@@ -2,6 +2,7 @@
 <!--Made with ♥ by Sam-->
 
 <html lang="en">
+
   <head>
     <meta name="google-site-verification" content="BbCYjVmHkZSJBGxo6oT1F1b4_vyLQrOe_jdtqQoagnE" />
     <title>Sam's Blog</title>
@@ -13,17 +14,16 @@
     <meta name="theme-color" content="#ffffff">
     <link
       href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic&display=swap'
-      rel='stylesheet' type='text/css'> 
+      rel='stylesheet' type='text/css' defer> 
     <link rel="icon" href="favicon/android-chrome-192x192.png" type="image/png" >
     <meta name="viewport" content="width=device-width" >
     <meta charset="UTF-8" >
     <canvas id='c'></canvas>
   </head>
-
  
 <body>
-  <div id="menu">
-    <div id="menu-bar" onclick="menuOnClick()">
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
       <div id="bar1" class="bar"></div>
       <div id="bar2" class="bar"></div>
       <div id="bar3" class="bar"></div>
@@ -39,22 +39,24 @@
   </div>
   
   <div class="menu-bg" id="menu-bg"></div>
+
   <form>
     <input type="checkbox" id="mode-toggle" class="sr-only">
-  <label for="mode-toggle" class="toggle">
+    <label for="mode-toggle" class="toggle">
     <span class="slider"></span>
-  </label>
+    </label>
   </form>
+
   <div class="head">
     <div class="headerobjectswrapper">
       <div class="weatherforcastbox">
         <!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow"
+            <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow"
               target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-            async> {"symbols": [
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" defer> 
+                {"symbols": [
               {
                 "proName": "FOREXCOM:SPXUSD",
                 "title": "S&P 500 Index"
@@ -259,9 +261,9 @@
       </div>
     </div>
   </div>
-  <script src="js/time and date.js" async></script>
-  <script src="js/background.js" async></script>
-  <script src="js/hamburger menu.js" async></script>
+  <script src="js/time and date.js" defer></script>
+  <script src="js/background.js" defer></script>
+  <script src="js/hamburger menu.js" defer></script>
 </body>
 
 </html>
