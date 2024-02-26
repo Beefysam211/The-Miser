@@ -1,45 +1,18 @@
-           header:hover {
-            /* Add the styles you want to apply on hover */
-            
-            color: #2196f3;
-            cursor: pointer; /* Change cursor to a pointer on hover */
-            /* You can add more styles as needed */
-            
-          }
-          
-          /* Optional: Add transitions for smooth hover effect */
-          header {
-            transition: background-color 0.3s, color 0.3s, transform 0.3s;
-          }
-
-          a:hover {
-            /* Add the styles you want to apply on hover */
-            
-            color: #f3de21;
-            cursor: pointer; /* Change cursor to a pointer on hover */
-            /* You can add more styles as needed */
-            
-          }
-          
-          /* Optional: Add transitions for smooth hover effect */
-          a {
-            transition: background-color 0.3s, color 0.3s, transform 0.3s;
-          }
-
-          .dark-mode a:hover {
-            /* Add the styles you want to apply on hover */
-            
-            color: #f3de21;
-            cursor: pointer; /* Change cursor to a pointer on hover */
-            /* You can add more styles as needed */
-            
-          }
-          
-          /* Optional: Add transitions for smooth hover effect */
-          .dark-mode a {
-            transition: background-color 0.3s, color 0.3s, transform 0.3s;
-          }
-          .removelinkdefault {
-            color: black;
-            text-decoration: none;
-        }
+header:hover {
+  color: #2196f3;
+  cursor: pointer;
+}
+.dark-mode a,
+a,
+header {
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.dark-mode a:hover,
+a:hover {
+  color: #f3de21;
+  cursor: pointer;
+}
+.removelinkdefault {
+  color: #000;
+  text-decoration: none;
+}
