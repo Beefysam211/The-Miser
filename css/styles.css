@@ -10,50 +10,86 @@ a {
   color: black;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-  left: 97.88%; /* Adjust as needed */
-}
+/*
+  📣 Note: all sizes are in ems, so change the .toggle font-size to
+  scale to whatever size you need.
+*/
 
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
+.toggle {
+  font-size: 0.8rem; /* 👈 change this to scale */
+  border: .125em solid currentColor;
+  border-radius: 2em;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 24px;
+  display: block;
+  height: 2em;
+  position: relative;
+  width: 3.75em;
+  left: 97%; /* Adjust as needed */
 }
-
-.slider:before {
+.toggle span {
+  background-color: currentColor;
+  border-radius: 2em;
+  display: block;
+  height: 1.5em;
+  left: .25em;
+  overflow: hidden;
   position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
+  top: .25em;
+  text-indent: -9999px;
+  transition: left .25s;
+  width: 1.5em;
+  z-index: 2;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+.toggle::before,
+.toggle::after {
+  content: '';
+  display: block;
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
 }
 
-input:checked + .slider:before {
-  transform: translateX(16px);
+.toggle::after {
+  box-shadow: .25em .25em #5901d8;
+  height: 1.125em;
+  right: .9em;
+  top: .125em;
+  width: 1.125em;
 }
 
+.toggle::before {
+  background-color: #ffc409;
+  height: .625em;
+  outline: .25em dotted #ffc409;
+  outline-offset: .125em;
+  left: .7em;
+  top: .7em;
+  width: .625em;
+}
+
+input:checked ~ .toggle span {
+  left: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
 body {
   background-color: rgb(255, 255, 255);
   font-family: "Droid Serif", serif;
