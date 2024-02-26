@@ -1,4 +1,5 @@
 ![image](https://github.com/Beefysam211/The-Miser/assets/84408620/e98b5fc4-8821-4c42-8dd2-4a26b553da3c)
+
 The Daily Prophet inspired blog made in vanilla html, css and javascript.
 
 Features:
