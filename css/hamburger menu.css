@@ -12,7 +12,7 @@
 .bar {
   height: 5px;
   width: 100%;
-  background-color: #DC052D;
+  background-color: #000000;
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
@@ -54,6 +54,10 @@
   top: 0;
   left: 0;
   position: absolute;
+}
+
+.dark-mode .bar {
+  background-color: #ffff;
 }
 
 .menu-bg {
