@@ -41,9 +41,13 @@
 }
 
 .nav li a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   text-decoration: none;
+}
+
+.dark-mode .nav li a {
+  color: white;
 }
 
 .nav li a:hover {
@@ -75,6 +79,10 @@
 }
 
 .change .bar {
+  background-color: rgb(0, 0, 0);
+}
+
+.dark-mode .bar {
   background-color: white;
 }
 
