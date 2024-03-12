@@ -1,871 +1,882 @@
 <!doctype html>
 <html lang=en>
-<head>
-<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic&display=swap" rel=stylesheet defer>
-<link rel=stylesheet href=../css/styles.css>
-<link rel=stylesheet href=../css/header.css>
-<link rel=stylesheet href="../css/timeline scroll.css">
-<meta name=description content="Reviews, consoles, video games, politics, blog, android, windows, technology, economics">
-<meta charset=UTF-8>
-<title>Windows Phone - A short history</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=icon href=../favicon/favicon-32x32.png type=image/png>
-<canvas id=c></canvas>
-</head>
-<body data-spy=scroll data-target=#navbar data-offset=600>
-<form>
-<input type=checkbox id=mode-toggle class=sr-only>
-<label for=mode-toggle class=toggle>
-<span class=slider></span>
-</label>
-</form>
-<div class=head>
-<div class=headerobjectswrapper>
-<div class=weatherforcastbox>
-<div class=tradingview-widget-container>
-<div class=tradingview-widget-container__widget></div>
-<div class=tradingview-widget-copyright><a href=https://in.tradingview.com/ rel="noopener nofollow" target=_blank><span class=blue-text>Track all markets on TradingView</span></a></div>
-<script src=https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js defer>
-{"symbols": [
-              {
-                "proName": "FOREXCOM:SPXUSD",
-                "title": "S&P 500 Index"
-              },
-              {
-                "proName": "BITSTAMP:BTCUSD",
-                "title": "Bitcoin"
-              },
-              {
-                "proName": "BITSTAMP:ETHUSD",
-                "title": "Ethereum"
-              },
-              {
-                "description": "India GDP",
-                "proName": "ECONOMICS:INGDP"
-              },
-              {
-                "description": "Nvidia",
-                "proName": "NASDAQ:NVDA"
-              },
-              {
-                "description": "Tesla",
-                "proName": "NASDAQ:TSLA"
-              },
-              {
-                "description": "Apple",
-                "proName": "NASDAQ:AAPL"
-              },
-              {
-                "description": "Amazon",
-                "proName": "NASDAQ:AMZN"
-              },
-              {
-                "description": "Meta",
-                "proName": "NASDAQ:META"
-              },
-              {
-                "description": "Microsoft",
-                "proName": "NASDAQ:MSFT"
-              },
-              {
-                "description": "Amd",
-                "proName": "NASDAQ:AMD"
-              },
-              {
-                "description": "Netflix",
-                "proName": "NASDAQ:NFLX"
-              },
-              {
-                "description": "Google",
-                "proName": "NASDAQ:GOOGL"
-              },
-              {
-                "description": "Nike",
-                "proName": "NYSE:NKE"
-              },
-              {
-                "description": "Oracle",
-                "proName": "NYSE:ORCL"
-              },
-              {
-                "description": "IBM",
-                "proName": "NYSE:IBM"
-              },
-              {
-                "description": "Mcdonalds",
-                "proName": "NYSE:MCD"
-              },
-              {
-                "description": "Electronic Arts",
-                "proName": "NASDAQ:EA"
-              },
-              {
-                "description": "Uber",
-                "proName": "NYSE:UBER"
-              },
-              {
-                "description": "Nasdaq",
-                "proName": "NASDAQ:NDAQ"
-              },
-              {
-                "description": "Twitter",
-                "proName": "NYSE:TWTR"
-              }
-              ],
-              "colorTheme": "light",
-              "isTransparent": 0,
-              "showSymbolLogo": 1,
-              "locale": "in"
-            }
-</script>
-</div>
-</div>
-<a href=/ >
-<header>The Miser </header>
-</a>
-<div class=subhead id=date>
 
-<body onload=display_ct()>
-<span id=ct></span>
-</body></div>
-</div>
-<div class=wrapper>
-<nav class=nav__wrapper id=navbar>
-<ul class=nav>
-<li role=presentation class="first active">
-<a href=#section1>
-<span class=nav__counter><img src=../img/microsoft.png></span>
-<h3 class=nav__title>Windows Phone</h3>
-<p class=nav__body><strong>A history</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section2>
-<span class=nav__counter>1996</span>
-<h3 class=nav__title>Windows CE 1.0</h3>
-<p class=nav__body><span class=meta-label>Codename</span> <strong>Pegasus</strong><br>
-<span class=meta-label>Released</span> <strong>Nov 16, 1996</strong><br>
-<span class=meta-label>End of life</span> <strong>Dec 31, 2001</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section3>
-<span class=nav__counter>1997</span>
-<h3 class=nav__title>Windows CE 2.0</h3>
-<p class=nav__body>Codename <strong>Birch</strong><br>
-Released <strong>Sep 29, 1997</strong><br>
-End of life <strong>Sep 30, 2005</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section4>
-<span class=nav__counter>2000</span>
-<h3 class=nav__title>Pocket PC 2000</h3>
-<p class=nav__body>Codename <strong>Rapier</strong><br>
-Released <strong>Apr 19, 2000</strong><br>
-End of life <strong>Sep 10, 2007</strong><br>
-Built on <strong>Windows CE 3.0</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section5>
-<span class=nav__counter>2001</span>
-<h3 class=nav__title>Pocket PC 2002</h3>
-<p class=nav__body>Codename <strong>Merlin</strong><br>
-Released <strong>Oct 2001</strong><br>
-End of life <strong>Oct 14, 2008</strong><br>
-Built on <strong>Windows CE 3.0</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section6>
-<span class=nav__counter>2003</span>
-<h3 class=nav__title>Windows Mobile 2003</h3>
-<p class=nav__body>Codename <strong>Ozone</strong><br>
-Released <strong>Jun 23, 2003</strong><br>
-End of life <strong>Jul 14, 2009</strong>
-<br>
-Built on <strong>Windows CE 4.2</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section7>
-<span class=nav__counter>2005</span>
-<h3 class=nav__title>Windows Mobile 5.0</h3>
-<p class=nav__body>Codename <strong>Magneto</strong><br>
-Released <strong>May 9, 2005</strong><br>
-End of life <strong>Oct 12, 2010</strong>
-<br>
-Built on <strong>Windows CE 5.0</strong></p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section8>
-<span class=nav__counter>2007</span>
-<h3 class=nav__title>Windows Mobile 6.0</h3>
-<p class=nav__body>Codename <strong>Crossbow</strong><br>
-Released <strong>Feb 10, 2007</strong><br>
-End of life <strong>Jan 8, 2013</strong>
-<br>
-Built on <strong>Windows CE 5.2</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section9>
-<span class=nav__counter>2008</span>
-<h3 class=nav__title>Windows Mobile 6.1</h3>
-<p class=nav__body>Codename <strong>—</strong><br>
-Released <strong>Apr 1, 2008</strong><br>
-End of life <strong>Jan 8, 2013</strong>
-<br>
-Built on <strong>Windows CE 5.2</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section10>
-<span class=nav__counter>2009</span>
-<h3 class=nav__title>Windows Mobile 6.5</h3>
-<p class=nav__body>Codename <strong>Titanium</strong><br>
-Released <strong>May 11, 2009</strong><br>
-End of life <strong>Jan 8, 2013</strong>
-<br>
-Built on <strong>Windows CE 5.2</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section11>
-<span class=nav__counter>2010</span>
-<h3 class=nav__title>Windows Phone 7</h3>
-<p class=nav__body>Codename <strong>Photon</strong><br>
-Released <strong>Oct 21, 2010</strong><br>
-End of life <strong>Oct 14, 2014</strong>
-<br>
-Built on <strong>Windows CE 7.0</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section12>
-<span class=nav__counter>2012</span>
-<h3 class=nav__title>Windows Phone 8</h3>
-<p class=nav__body>Codename <strong>Apollo</strong><br>
-Released <strong>Oct 29, 2012</strong><br>
-End of life <strong>Jan 12, 2016</strong>
-<br>
-Built on <strong>Windows NT</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section13>
-<span class=nav__counter>2014</span>
-<h3 class=nav__title>Windows Phone 8.1</h3>
-<p class=nav__body>Codename <strong>Blue</strong><br>
-Released <strong>Apr 14, 2014</strong><br>
-End of life <strong>Jul 11, 2017</strong>
-<br>
-Built on <strong>Windows NT</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section14>
-<span class=nav__counter>2015</span>
-<h3 class=nav__title>Windows 10 Mobile</h3>
-<p class=nav__body>Codename <strong>Threshold</strong><br>
-Released <strong>Nov 20, 2015</strong><br>
-End of life <strong>Jun 11, 2019</strong>
-<br>
-Built on <strong>Windows NT</strong>
-</p>
-</a>
-</li>
-<li role=presentation>
-<a href=#section15>
-<span class=nav__counter>2017</span>
-<h3 class=nav__title>Windows Phone RIP</h3>
-</a>
-</li>
-</ul>
-</nav>
-<main id=main>
-<section class=dummy></section>
-<section class="section section1" id=section1>
-<div>
-<div class="section-heading first">
-<p class=title>Windows Phone<br><span class=nav__title>A history</span></p>
-</div>
-<p><strong>Microsoft</strong> is giving up on its mobile OS aspirations for now. In Windows Phone, it produced a unique mobile OS; arguably the most original of the mobile OSes. Let's see how it got there.</p>
-<p>The journey to Windows Phone 10 was a colourful one that spans three decades and includes many devices, and several different operating systems.</p>
-<p>This story starts with the launch of Windows CE 1.0 in 1996.</p>
-</div>
-</section>
-<section class="section section2" id=section2>
-<div>
-<div class=section-heading>
-<div class=date>1996</div>
-<p class=title>Windows CE 1.0</p>
-</div>
-<p>Windows CE was launched in 1996 by Bill Gates, and laid the foundation for Microsoft's future mobile operating systems.</p>
-<p>Referred to as <strong>Handheld PCs</strong>, the form factor of these devices was that of a small, portable PC, resembling more a tiny laptop than the mobile devices we're used to today.</p>
-<p>But mobile they were, generally weighing less than <strong>450 g</strong>. CPU speeds were in the <strong>40-50 MHz</strong> range, and they usually came with monochrome screens with resolution of around 480&times;240 pixels.</p>
-<p><strong>Pocket Internet Explorer</strong> was also introduced with CE 1.0. It did not share a codebase with its desktop counterpart—instead it was written from scratch to be lightweight.</p>
-<p>Device in class: <strong>HP 320LX</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/hp-320lx.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>Monochrome<br>640&times;240</td>
-</tr>
-<tr>
-<td>Input</td><td>79 key keyboard<br>Touchscreen<br>Stylus</td>
-</tr>
-<tr>
-<td>CPU</td><td>40 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>4 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>5 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>442 g</td>
-</tr>
-</table>
-</div>
-</div>
-</div></section>
-<section class="section section3" id=section3>
-<div>
-<div class=section-heading>
-<div class=date>1997</div>
-<p class=title>Windows CE 2.0</p>
-</div>
-<p>Many regarded the first version of Windows CE to be a short-lived beta. With CE 2.0 Microsoft modularised the operating system, and expanded the number and types of device that could run it. Windows CE could now be used in diverse devices including <strong>cars</strong>, <strong>games consoles</strong>, and even <strong>kitchen utensils</strong>.</p>
-<p>Supported architectures were <strong>ARM</strong>, <strong>MIPS</strong>, <strong>PowerPC</strong>, <strong>StrongARM</strong>, <strong>SuperH</strong> and <strong>x86</strong>.</p>
-<p>Notably, Windows CE 2.0 added support for <strong>colour VGA screens</strong>, as well as <strong>built-in network support</strong>.</p>
-<p>In all, there were 12 further updates to Windows CE 2.</p>
-<p>Device in class: <strong>HP Jornada 820</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/jornada-820.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>256 colours<br>640&times;480</td>
-</tr>
-<tr>
-<td>Input</td><td>Keyboard<br>Touchpad</td>
-</tr>
-<tr>
-<td>CPU</td><td>Intel StrongARM<br>190 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>16 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>16 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>1.1 kg</td>
-</tr>
-<tr>
-<td>Size</td><td>246&times;33&times;178 mm</td>
-</tr>
-</table>
-</div>
-</div></div></section>
-<section class="section section4" id=section4>
-<div>
-<div class=section-heading>
-<div class=date>2000</div>
-<p class=title>Pocket PC 2000</p>
-</div>
-<p>Based on Windows CE 3.0 which was launched in the same year, the only resolution supported by this release was <strong>240&times;320 (QVGA)</strong>.</p>
-<p>Built-in apps included pocket versions of Microsoft's Office suite, including Pocket Word, Pocket Excel, and Pocket Outlook, as well as <strong>Notes</strong>, a note taking app with <strong>handwriting recognition</strong>.</p>
-<p>The <strong>Pocket Internet Explorer</strong> browser saw improvements too, with features like <strong>Shrink-to-fit</strong> which resized web pages for small screens.</p>
-<p><strong>Infrared (IR) file beaming</strong> was also supported.</p>
-<p>Device in class: <strong>Compaq iPAQ H3100</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/ipaq-h3100.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>Monochrome<br>240&times;320</td>
-</tr>
-<tr>
-<td>Input</td><td>Stylus<br>Touchscreen<br>D-pad<br>Customisable buttons</td>
-</tr>
-<tr>
-<td>CPU</td><td>Intel StrongARM 206 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>16 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>16 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>163 g</td>
-</tr>
-<tr>
-<td>Size</td><td>5&times;3&times;6 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section5" id=section5>
-<div>
-<div class=section-heading>
-<div class=date>2001</div>
-<p class=title>Pocket PC 2002</p>
-</div>
-<p>This release mainly targeted Pocket PC devices, although a <strong>Phone Edition</strong> of the OS included cell phone functionality in addition to the PDA abilities.</p>
-<p>Aesthetically, Pocket PC 2002 was designed to look like Windows XP.</p>
-<p><strong>WAP browsing</strong> support was added to Pocket Internet Explorer.</p>
-<p>Device in class: <strong>Dell Axim X5</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/dell-axim-x5-2.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>Colour<br>240&times;320</td>
-</tr>
-<tr>
-<td>Input</td><td>Stylus<br>Touchscreen<br>D-pad<br>Customisable buttons</td>
-</tr>
-<tr>
-<td>CPU</td><td>Intel XScale 300 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>32 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>32 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>196 g</td>
-</tr>
-<tr>
-<td>Size</td><td>5&times;3&times;6 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section6" id=section6>
-<div>
-<div class=section-heading>
-<div class=date>2003</div>
-<p class=title>Windows Mobile 2003</p>
-</div>
-<p>Windows Mobile 2003 came in a variety of editions, including Pocket PC Premium, Professional, Smartphone, and Pocket PC Phone.</p>
-<p>It included a number of enterprise features such as <strong>VPN support</strong>, <strong>WiFi enhancements</strong>, and <strong>SMS APIs</strong>.</p>
-<p>Device in class: <strong>O2 XDA II</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/o2-xda-3.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>16-bit colour<br>240&times;320</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen<br>D-pad<br></td>
-</tr>
-<tr>
-<td>CPU</td><td>Intel XScale 400 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>128 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>64 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>190 g</td>
-</tr>
-<tr>
-<td>Size</td><td>5.117&times;3.28&times;6.2 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section7" id=section7>
-<div>
-<div class=section-heading>
-<div class=date>2005</div>
-<p class=title>Windows Mobile 5.0</p>
-</div>
-<p>Windows Mobile 5 was available in Pocket PC and Smartphone editions, the former including touchscreen and MS Office, and the latter without.</p>
-<p>A <strong>new memory architecture</strong> was added for <strong>persistent storage</strong>: RAM was used for running programs, not for storage, so that no data would be lost under power failure.</p>
-<p>Device in class: <strong>Palm Treo 750v</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/treo.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>16-bit colour<br>240&times;240</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen<br>Stylus<br>D-pad<br>Qwerty keyboard</td>
-</tr>
-<tr>
-<td>CPU</td><td>Samsung 300 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>100 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>60 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>154 g</td>
-</tr>
-<tr>
-<td>Size</td><td>111&times;58&times;22 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section8" id=section8>
-<div>
-<div class=section-heading>
-<div class=date>2007</div>
-<p class=title>Windows Mobile 6.0</p>
-</div>
-<p>Windows Mobile 6 introduced a new, simplified, naming scheme, with <strong>Classic</strong>, <strong>Standard</strong>, and <strong>Professional</strong> versions.</p>
-<p>Professional ran on smartphones with touchscreens, Standard ran on mobile phones without touchscreens, and Classic which was for PDAs or Pocket PCs.</p>
-<p>New screen sizes of <strong>320&times;320</strong> and <strong>800&times;480</strong> were supported.</p>
-<p>Device in class: <strong>HTC Touch</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/htc-touch.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>16-bit colour<br>240&times;320</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen<br>Stylus<br>D-pad</td>
-</tr>
-<tr>
-<td>CPU</td><td>ARM 200 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>128 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>256 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>112 g</td>
-</tr>
-<tr>
-<td>Size</td><td>100&times;58&times;14</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section9" id=section9>
-<div>
-<div class=section-heading>
-<div class=date>2008</div>
-<p class=title>Windows Mobile 6.1</p>
-</div>
-<p>Although this was a minor update to Windows Mobile 6.0 it included some key features and was well received.</p>
-<p>It included a <strong>redesigned home screen</strong>, with a tile-based UI, and <strong>threaded SMS conversations</strong>.</p>
-<p>Internet Explorer saw some improvements too, with <strong>full-page zooming</strong>.</p>
-<p>Device in class: <strong>Sony Ericsson Xperia X1</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/xperia-x1-2.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>16-bit colour<br>480&times;800</td>
-</tr>
-<tr>
-<td>Input</td><td>QWERTY keyboard<br>Touchscreen<br>Optical trackpad<br>Stylus</td>
-</tr>
-<tr>
-<td>CPU</td><td>ARM 11 528 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>256 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>512 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>145 g</td>
-</tr>
-<tr>
-<td>Size</td><td>110&times;53&times;17 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section10" id=section10>
-<div>
-<div class=section-heading>
-<div class=date>2009</div>
-<p class=title>Windows Mobile 6.5</p>
-</div>
-<p>Windows Mobile 6.5 was a stopgap update to Windows Mobile 6.1 intended to bridge the gap between version 6.1 and the then-to-be-released Windows Mobile 7.</p>
-<p>This release was significant in that it saw the OS become more <strong>finger-friendly</strong>. It featured a slick new <strong>Today</strong> screen with large, clean, expanding, text elements—parts of this UI would carry over into Windows Phone.</p>
-<p>It also included a <strong>hexagonal tile-based</strong> Start Menu, which was innovative, but ultimately didn't stand the test of time.</p>
-<p><strong>Windows Marketplace for Mobile</strong>, an app store, was also launched with this release.</p>
-<p>Device in class: <strong>Samsung Omnia Pro B7330</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/samsung-omnia-pro.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>16-bit colour<br>320&times;320</td>
-</tr>
-<tr>
-<td>Input</td><td>QWERTY keyboard<br>Touchscreen</td>
-</tr>
-<tr>
-<td>CPU</td><td>ARM 11 528 MHz</td>
-</tr>
-<tr>
-<td>RAM</td><td>256 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>512 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>111 g</td>
-</tr>
-<tr>
-<td>Size</td><td>110&times;53&times;17 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section11" id=section11>
-<div>
-<div class=section-heading>
-<div class=date>2010</div>
-<p class=title>Windows Phone 7</p>
-</div>
-<p>Windows Phone 7 was the only version of Windows Phone based on <strong>Windows CE</strong>, as future versions moved to the Windows NT kernel.</p>
-<p>Windows Phone 7 employed Microsoft's <strong>Metro</strong> UI, a design language focused on typography and simplified icons, as well as <strong>Live Tiles</strong>, a fresh, colourful, tile-based home screen, with fluid transitions between screens. It looked markedly different to its predecessors, and offered a unique alternative to Android and iOS.</p>
-<p>Microsoft laid down minimum hardware specifications for Windows 7 handsets, which mandated <strong>5 physical buttons</strong>, for <strong>Start</strong>, <strong>back</strong>, <strong>search</strong>, <strong>camera</strong>, and <strong>power.</strong>, as well as CPU, GPU, screen, and connectivity requirements.</p>
-<p>Device in class: <strong>HTC HD7</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/htc-hd7-4.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>32-bit colour<br>480&times;800</td>
-</tr>
-<tr>
-<td>Input</td><td>QWERTY keyboard<br>Touchscreen</td>
-</tr>
-<tr>
-<td>CPU</td><td>Snapdragon S1 1.0 GHz</td>
-</tr>
-<tr>
-<td>GPU</td><td>Adreno 200</td>
-</tr>
-<tr>
-<td>RAM</td><td>576 MB</td>
-</tr>
-<tr>
-<td>ROM</td><td>512 MB</td>
-</tr>
-<tr>
-<td>Weight</td><td>162 g</td>
-</tr>
-<tr>
-<td>Size</td><td>122&times;68&times;11 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section12" id=section12>
-<div>
-<div class=section-heading>
-<div class=date>2012</div>
-<p class=title>Windows Phone 8</p>
-</div>
-<p>Based on Windows NT kernel, and sharing Windows 8 code, Windows Phone 8 release saw a unification of Microsoft's mobile and desktop offerings, resulting in a more consistent experience for developers and users across platforms.</p>
-<p>Resizable home screen tiles, 720p HD screens, Internet Explorer 10</p>
-<p>Introduced in November 2011, the line is the result of a long-term partnership between Nokia and Microsoft—as such, most Lumia smartphones run the Windows Phone operating system, excluding some later models which run the newer Windows 10 Mobile. The Lumia name is derived from the partitive plural form of the Finnish word lumi, meaning "snow"</p>
-<p>Device in class: <strong>Nokia Lumia 920</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/lumia-920.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>32-bit/16 M colours<br>1280&times;768</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen</td>
-</tr>
-<tr>
-<td>CPU</td><td>Qualcomm Krait dual-core<br>1.5 GHz</td>
-</tr>
-<tr>
-<td>GPU</td><td>Adreno 320</td>
-</tr>
-<tr>
-<td>RAM</td><td>1 GB</td>
-</tr>
-<tr>
-<td>Weight</td><td>185 g</td>
-</tr>
-<tr>
-<td>Size</td><td>130&times;71&times;11 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section13" id=section13>
-<div>
-<div class=section-heading>
-<div class=date>2014</div>
-<p class=title>Windows Phone 8.1</p>
-</div>
-<p>Windows Phone 8.1 saw significant upgrades to the Windows OS.</p>
-<p><strong>Cortana</strong>, Microsoft's voice activated digital assistant, came to the platform, and brought voice-based search to Windows Phone.</p>
-<p>A new notifications panel, called <strong>Action Center</strong>, was also introduced which vastly improved notifications in Windows Phone</p>
-<p>Internet Explorer 11</p>
-<p>Device in class: <strong>HTC One M8</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/htc-one-m8.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>32-bit/16 M colours<br>1280&times;768</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen</td>
-</tr>
-<tr>
-<td>CPU</td><td>Qualcomm Snapdragon 801<br>2.45 GHz</td>
-</tr>
-<tr>
-<td>GPU</td><td>Adreno 330</td>
-</tr>
-<tr>
-<td>RAM</td><td>2 GB</td>
-</tr>
-<tr>
-<td>Weight</td><td>160 g</td>
-</tr>
-<tr>
-<td>Size</td><td>146&times;71&times;9 mm</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section14" id=section14>
-<div>
-<div class=section-heading>
-<div class=date>2015</div>
-<p class=title>Windows 10 Mobile</p>
-</div>
-<p>This was the last iteration of the Windows Phone OS. It aimed to unify and provide greater consistency with its Windows 10 desktop counterpart.</p>
-<p>It provided the new <strong>Universal Windows Platform (UWP)</strong> which allowed apps to be built for and run across all Windows 10 devices, whether desktop, mobile, or console.</p>
-<p>Syncing was also improved between devices. For example, a notification dismissed on desktop would automatically be dismissed on mobile too.</p>
-<p>Device in class: <strong>Microsoft Lumia 950 XL</strong></p>
-<div class=device-container>
-<div class=device-image>
-<img src=../img/microsoft-lumia-950-xl.png>
-</div>
-<div class=device-features>
-<table class=device-data>
-<tr>
-<td>Screen</td><td>32-bit/16 M colours<br>1280&times;768</td>
-</tr>
-<tr>
-<td>Input</td><td>Touchscreen</td>
-</tr>
-<tr>
-<td>CPU</td><td>4&times;core Cortex A57 2GHz<br> + 4&times;core Cortex A53 1.5 GHz</td>
-</tr>
-<tr>
-<td>GPU</td><td>Adreno 430</td>
-</tr>
-<tr>
-<td>RAM</td><td>3 GB</td>
-</tr>
-<tr>
-<td>Weight</td><td>165 g</td>
-</tr>
-<tr>
-<td>Size</td><td>152&times;79&times;8</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section class="section section15" id=section15>
-<div>
-<div class=section-heading>
-<div class=date>2017</div>
-<p class=title>Windows Phone RIP</p>
-</div>
-<p>
-In October 2017 Microsoft's corporate vice president, Joe Belfiore, confirmed that, due to low market-share and lack of third-party development, Microsoft will <strong>no longer sell or manufacture</strong> new Windows 10 Mobile devices.</p>
-<p>Existing devices will receive bug fixes and security updates only.</p>
-<p>So long, Windows Phone. <strong>We will miss you</strong>.</p>
-</div></section>
-</main>
-</div>
-<script src=../js/cdnjs.cloudflare.com_ajax_libs_jquery_2.1.3_jquery.min.js></script>
-<script src=../js/maxcdn.bootstrapcdn.com_bootstrap_3.3.6_js_bootstrap.min.js></script>
-<script src=../js/background.js defer></script>
-<script src="../js/time and date.js" defer></script>
-<script src="../js/timeline scroll.js" defer></script>
-</div></body>
+<head>
+  <link rel="stylesheet prefetch"
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic&display=swap"
+    rel=stylesheet defer>
+  <link rel=stylesheet href=../css/styles.css>
+  <link rel=stylesheet href=../css/header.css>
+  <link rel=stylesheet href="../css/timeline scroll.css">
+  <meta name=description content="Reviews, consoles, video games, politics, blog, android, windows, technology, economics">
+  <meta charset=UTF-8>
+  <title>Windows Phone - A short history</title>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <link rel=icon href=../favicon/favicon-32x32.png type=image/png> <canvas id=c></canvas>
+</head>
+
+<body data-spy=scroll data-target=#navbar data-offset=600>
+  <form> <input type=checkbox id=mode-toggle class=sr-only> <label for=mode-toggle class=toggle> <span class=slider></span> </label> </form>
+  <div class=head>
+    <div class=headerobjectswrapper>
+      <div class=weatherforcastbox>
+        <div class=tradingview-widget-container>
+          <div class=tradingview-widget-container__widget></div>
+          <div class=tradingview-widget-copyright><a href=https://in.tradingview.com/ rel="noopener nofollow" target=_blank><span class=blue-text>Track all
+                markets on TradingView</span></a></div>
+          <script src=https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js defer>
+            {"symbols": [
+                          {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500 Index"
+                          },
+                          {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                          },
+                          {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                          },
+                          {
+                            "description": "India GDP",
+                            "proName": "ECONOMICS:INGDP"
+                          },
+                          {
+                            "description": "Nvidia",
+                            "proName": "NASDAQ:NVDA"
+                          },
+                          {
+                            "description": "Tesla",
+                            "proName": "NASDAQ:TSLA"
+                          },
+                          {
+                            "description": "Apple",
+                            "proName": "NASDAQ:AAPL"
+                          },
+                          {
+                            "description": "Amazon",
+                            "proName": "NASDAQ:AMZN"
+                          },
+                          {
+                            "description": "Meta",
+                            "proName": "NASDAQ:META"
+                          },
+                          {
+                            "description": "Microsoft",
+                            "proName": "NASDAQ:MSFT"
+                          },
+                          {
+                            "description": "Amd",
+                            "proName": "NASDAQ:AMD"
+                          },
+                          {
+                            "description": "Netflix",
+                            "proName": "NASDAQ:NFLX"
+                          },
+                          {
+                            "description": "Google",
+                            "proName": "NASDAQ:GOOGL"
+                          },
+                          {
+                            "description": "Nike",
+                            "proName": "NYSE:NKE"
+                          },
+                          {
+                            "description": "Oracle",
+                            "proName": "NYSE:ORCL"
+                          },
+                          {
+                            "description": "IBM",
+                            "proName": "NYSE:IBM"
+                          },
+                          {
+                            "description": "Mcdonalds",
+                            "proName": "NYSE:MCD"
+                          },
+                          {
+                            "description": "Electronic Arts",
+                            "proName": "NASDAQ:EA"
+                          },
+                          {
+                            "description": "Uber",
+                            "proName": "NYSE:UBER"
+                          },
+                          {
+                            "description": "Nasdaq",
+                            "proName": "NASDAQ:NDAQ"
+                          },
+                          {
+                            "description": "Twitter",
+                            "proName": "NYSE:TWTR"
+                          }
+                          ],
+                          "colorTheme": "light",
+                          "isTransparent": 0,
+                          "showSymbolLogo": 1,
+                          "locale": "in"
+                        }
+          </script>
+        </div>
+      </div> <a href=/>
+        <header>The Miser </header>
+      </a>
+      <div class=subhead id=date>
+
+        <body onload=display_ct()> <span id=ct></span> </body>
+      </div>
+    </div>
+    <div class=wrapper>
+      <nav class=nav__wrapper id=navbar>
+        <ul class=nav>
+          <li role=presentation class="first active"> <a href=#section1> <span class=nav__counter><img src=../img/microsoft.png></span>
+              <h3 class=nav__title>Windows Phone</h3>
+              <p class=nav__body><strong>A history</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section2> <span class=nav__counter>1996</span>
+              <h3 class=nav__title>Windows CE 1.0</h3>
+              <p class=nav__body><span class=meta-label>Codename</span> <strong>Pegasus</strong><br> <span class=meta-label>Released</span> <strong>Nov 16,
+                  1996</strong><br> <span class=meta-label>End of life</span> <strong>Dec 31, 2001</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section3> <span class=nav__counter>1997</span>
+              <h3 class=nav__title>Windows CE 2.0</h3>
+              <p class=nav__body>Codename <strong>Birch</strong><br> Released <strong>Sep 29, 1997</strong><br> End of life <strong>Sep 30, 2005</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section4> <span class=nav__counter>2000</span>
+              <h3 class=nav__title>Pocket PC 2000</h3>
+              <p class=nav__body>Codename <strong>Rapier</strong><br> Released <strong>Apr 19, 2000</strong><br> End of life <strong>Sep 10, 2007</strong><br>
+                Built on <strong>Windows CE 3.0</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section5> <span class=nav__counter>2001</span>
+              <h3 class=nav__title>Pocket PC 2002</h3>
+              <p class=nav__body>Codename <strong>Merlin</strong><br> Released <strong>Oct 2001</strong><br> End of life <strong>Oct 14, 2008</strong><br> Built
+                on <strong>Windows CE 3.0</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section6> <span class=nav__counter>2003</span>
+              <h3 class=nav__title>Windows Mobile 2003</h3>
+              <p class=nav__body>Codename <strong>Ozone</strong><br> Released <strong>Jun 23, 2003</strong><br> End of life <strong>Jul 14, 2009</strong> <br>
+                Built on <strong>Windows CE 4.2</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section7> <span class=nav__counter>2005</span>
+              <h3 class=nav__title>Windows Mobile 5.0</h3>
+              <p class=nav__body>Codename <strong>Magneto</strong><br> Released <strong>May 9, 2005</strong><br> End of life <strong>Oct 12, 2010</strong> <br>
+                Built on <strong>Windows CE 5.0</strong></p>
+            </a> </li>
+          <li role=presentation> <a href=#section8> <span class=nav__counter>2007</span>
+              <h3 class=nav__title>Windows Mobile 6.0</h3>
+              <p class=nav__body>Codename <strong>Crossbow</strong><br> Released <strong>Feb 10, 2007</strong><br> End of life <strong>Jan 8, 2013</strong> <br>
+                Built on <strong>Windows CE 5.2</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section9> <span class=nav__counter>2008</span>
+              <h3 class=nav__title>Windows Mobile 6.1</h3>
+              <p class=nav__body>Codename <strong>—</strong><br> Released <strong>Apr 1, 2008</strong><br> End of life <strong>Jan 8, 2013</strong> <br> Built
+                on <strong>Windows CE 5.2</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section10> <span class=nav__counter>2009</span>
+              <h3 class=nav__title>Windows Mobile 6.5</h3>
+              <p class=nav__body>Codename <strong>Titanium</strong><br> Released <strong>May 11, 2009</strong><br> End of life <strong>Jan 8, 2013</strong> <br>
+                Built on <strong>Windows CE 5.2</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section11> <span class=nav__counter>2010</span>
+              <h3 class=nav__title>Windows Phone 7</h3>
+              <p class=nav__body>Codename <strong>Photon</strong><br> Released <strong>Oct 21, 2010</strong><br> End of life <strong>Oct 14, 2014</strong> <br>
+                Built on <strong>Windows CE 7.0</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section12> <span class=nav__counter>2012</span>
+              <h3 class=nav__title>Windows Phone 8</h3>
+              <p class=nav__body>Codename <strong>Apollo</strong><br> Released <strong>Oct 29, 2012</strong><br> End of life <strong>Jan 12, 2016</strong> <br>
+                Built on <strong>Windows NT</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section13> <span class=nav__counter>2014</span>
+              <h3 class=nav__title>Windows Phone 8.1</h3>
+              <p class=nav__body>Codename <strong>Blue</strong><br> Released <strong>Apr 14, 2014</strong><br> End of life <strong>Jul 11, 2017</strong> <br>
+                Built on <strong>Windows NT</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section14> <span class=nav__counter>2015</span>
+              <h3 class=nav__title>Windows 10 Mobile</h3>
+              <p class=nav__body>Codename <strong>Threshold</strong><br> Released <strong>Nov 20, 2015</strong><br> End of life <strong>Jun 11, 2019</strong>
+                <br> Built on <strong>Windows NT</strong> </p>
+            </a> </li>
+          <li role=presentation> <a href=#section15> <span class=nav__counter>2017</span>
+              <h3 class=nav__title>Windows Phone RIP</h3>
+            </a> </li>
+        </ul>
+      </nav>
+      <main id=main>
+        <section class=dummy></section>
+        <section class="section section1" id=section1>
+          <div>
+            <div class="section-heading first">
+              <p class=title>Windows Phone<br><span class=nav__title>A history</span></p>
+            </div>
+            <p><strong>Microsoft</strong> is giving up on its mobile OS aspirations for now. In Windows Phone, it produced a unique mobile OS; arguably the most
+              original of the mobile OSes. Let's see how it got there.</p>
+            <p>The journey to Windows Phone 10 was a colourful one that spans three decades and includes many devices, and several different operating systems.
+            </p>
+            <p>This story starts with the launch of Windows CE 1.0 in 1996.</p>
+          </div>
+        </section>
+        <section class="section section2" id=section2>
+          <div>
+            <div class=section-heading>
+              <div class=date>1996</div>
+              <p class=title>Windows CE 1.0</p>
+            </div>
+            <p>Windows CE was launched in 1996 by Bill Gates, and laid the foundation for Microsoft's future mobile operating systems.</p>
+            <p>Referred to as <strong>Handheld PCs</strong>, the form factor of these devices was that of a small, portable PC, resembling more a tiny laptop
+              than the mobile devices we're used to today.</p>
+            <p>But mobile they were, generally weighing less than <strong>450 g</strong>. CPU speeds were in the <strong>40-50 MHz</strong> range, and they
+              usually came with monochrome screens with resolution of around 480&times;240 pixels.</p>
+            <p><strong>Pocket Internet Explorer</strong> was also introduced with CE 1.0. It did not share a codebase with its desktop counterpart—instead it
+              was written from scratch to be lightweight.</p>
+            <p>Device in class: <strong>HP 320LX</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/hp-320lx.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>Monochrome<br>640&times;240</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>79 key keyboard<br>Touchscreen<br>Stylus</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>40 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>4 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>5 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>442 g</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section3" id=section3>
+          <div>
+            <div class=section-heading>
+              <div class=date>1997</div>
+              <p class=title>Windows CE 2.0</p>
+            </div>
+            <p>Many regarded the first version of Windows CE to be a short-lived beta. With CE 2.0 Microsoft modularised the operating system, and expanded the
+              number and types of device that could run it. Windows CE could now be used in diverse devices including <strong>cars</strong>, <strong>games
+                consoles</strong>, and even <strong>kitchen utensils</strong>.</p>
+            <p>Supported architectures were <strong>ARM</strong>, <strong>MIPS</strong>, <strong>PowerPC</strong>, <strong>StrongARM</strong>,
+              <strong>SuperH</strong> and <strong>x86</strong>.</p>
+            <p>Notably, Windows CE 2.0 added support for <strong>colour VGA screens</strong>, as well as <strong>built-in network support</strong>.</p>
+            <p>In all, there were 12 further updates to Windows CE 2.</p>
+            <p>Device in class: <strong>HP Jornada 820</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/jornada-820.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>256 colours<br>640&times;480</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Keyboard<br>Touchpad</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Intel StrongARM<br>190 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>16 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>16 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>1.1 kg</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>246&times;33&times;178 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section4" id=section4>
+          <div>
+            <div class=section-heading>
+              <div class=date>2000</div>
+              <p class=title>Pocket PC 2000</p>
+            </div>
+            <p>Based on Windows CE 3.0 which was launched in the same year, the only resolution supported by this release was <strong>240&times;320
+                (QVGA)</strong>.</p>
+            <p>Built-in apps included pocket versions of Microsoft's Office suite, including Pocket Word, Pocket Excel, and Pocket Outlook, as well as
+              <strong>Notes</strong>, a note taking app with <strong>handwriting recognition</strong>.</p>
+            <p>The <strong>Pocket Internet Explorer</strong> browser saw improvements too, with features like <strong>Shrink-to-fit</strong> which resized web
+              pages for small screens.</p>
+            <p><strong>Infrared (IR) file beaming</strong> was also supported.</p>
+            <p>Device in class: <strong>Compaq iPAQ H3100</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/ipaq-h3100.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>Monochrome<br>240&times;320</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Stylus<br>Touchscreen<br>D-pad<br>Customisable buttons</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Intel StrongARM 206 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>16 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>16 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>163 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>5&times;3&times;6 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section5" id=section5>
+          <div>
+            <div class=section-heading>
+              <div class=date>2001</div>
+              <p class=title>Pocket PC 2002</p>
+            </div>
+            <p>This release mainly targeted Pocket PC devices, although a <strong>Phone Edition</strong> of the OS included cell phone functionality in addition
+              to the PDA abilities.</p>
+            <p>Aesthetically, Pocket PC 2002 was designed to look like Windows XP.</p>
+            <p><strong>WAP browsing</strong> support was added to Pocket Internet Explorer.</p>
+            <p>Device in class: <strong>Dell Axim X5</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/dell-axim-x5-2.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>Colour<br>240&times;320</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Stylus<br>Touchscreen<br>D-pad<br>Customisable buttons</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Intel XScale 300 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>32 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>32 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>196 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>5&times;3&times;6 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section6" id=section6>
+          <div>
+            <div class=section-heading>
+              <div class=date>2003</div>
+              <p class=title>Windows Mobile 2003</p>
+            </div>
+            <p>Windows Mobile 2003 came in a variety of editions, including Pocket PC Premium, Professional, Smartphone, and Pocket PC Phone.</p>
+            <p>It included a number of enterprise features such as <strong>VPN support</strong>, <strong>WiFi enhancements</strong>, and <strong>SMS
+                APIs</strong>.</p>
+            <p>Device in class: <strong>O2 XDA II</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/o2-xda-3.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>16-bit colour<br>240&times;320</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen<br>D-pad<br></td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Intel XScale 400 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>128 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>64 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>190 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>5.117&times;3.28&times;6.2 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section7" id=section7>
+          <div>
+            <div class=section-heading>
+              <div class=date>2005</div>
+              <p class=title>Windows Mobile 5.0</p>
+            </div>
+            <p>Windows Mobile 5 was available in Pocket PC and Smartphone editions, the former including touchscreen and MS Office, and the latter without.</p>
+            <p>A <strong>new memory architecture</strong> was added for <strong>persistent storage</strong>: RAM was used for running programs, not for storage,
+              so that no data would be lost under power failure.</p>
+            <p>Device in class: <strong>Palm Treo 750v</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/treo.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>16-bit colour<br>240&times;240</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen<br>Stylus<br>D-pad<br>Qwerty keyboard</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Samsung 300 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>100 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>60 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>154 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>111&times;58&times;22 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section8" id=section8>
+          <div>
+            <div class=section-heading>
+              <div class=date>2007</div>
+              <p class=title>Windows Mobile 6.0</p>
+            </div>
+            <p>Windows Mobile 6 introduced a new, simplified, naming scheme, with <strong>Classic</strong>, <strong>Standard</strong>, and
+              <strong>Professional</strong> versions.</p>
+            <p>Professional ran on smartphones with touchscreens, Standard ran on mobile phones without touchscreens, and Classic which was for PDAs or Pocket
+              PCs.</p>
+            <p>New screen sizes of <strong>320&times;320</strong> and <strong>800&times;480</strong> were supported.</p>
+            <p>Device in class: <strong>HTC Touch</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/htc-touch.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>16-bit colour<br>240&times;320</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen<br>Stylus<br>D-pad</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>ARM 200 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>128 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>256 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>112 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>100&times;58&times;14</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section9" id=section9>
+          <div>
+            <div class=section-heading>
+              <div class=date>2008</div>
+              <p class=title>Windows Mobile 6.1</p>
+            </div>
+            <p>Although this was a minor update to Windows Mobile 6.0 it included some key features and was well received.</p>
+            <p>It included a <strong>redesigned home screen</strong>, with a tile-based UI, and <strong>threaded SMS conversations</strong>.</p>
+            <p>Internet Explorer saw some improvements too, with <strong>full-page zooming</strong>.</p>
+            <p>Device in class: <strong>Sony Ericsson Xperia X1</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/xperia-x1-2.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>16-bit colour<br>480&times;800</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>QWERTY keyboard<br>Touchscreen<br>Optical trackpad<br>Stylus</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>ARM 11 528 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>256 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>512 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>145 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>110&times;53&times;17 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section10" id=section10>
+          <div>
+            <div class=section-heading>
+              <div class=date>2009</div>
+              <p class=title>Windows Mobile 6.5</p>
+            </div>
+            <p>Windows Mobile 6.5 was a stopgap update to Windows Mobile 6.1 intended to bridge the gap between version 6.1 and the then-to-be-released Windows
+              Mobile 7.</p>
+            <p>This release was significant in that it saw the OS become more <strong>finger-friendly</strong>. It featured a slick new <strong>Today</strong>
+              screen with large, clean, expanding, text elements—parts of this UI would carry over into Windows Phone.</p>
+            <p>It also included a <strong>hexagonal tile-based</strong> Start Menu, which was innovative, but ultimately didn't stand the test of time.</p>
+            <p><strong>Windows Marketplace for Mobile</strong>, an app store, was also launched with this release.</p>
+            <p>Device in class: <strong>Samsung Omnia Pro B7330</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/samsung-omnia-pro.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>16-bit colour<br>320&times;320</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>QWERTY keyboard<br>Touchscreen</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>ARM 11 528 MHz</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>256 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>512 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>111 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>110&times;53&times;17 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section11" id=section11>
+          <div>
+            <div class=section-heading>
+              <div class=date>2010</div>
+              <p class=title>Windows Phone 7</p>
+            </div>
+            <p>Windows Phone 7 was the only version of Windows Phone based on <strong>Windows CE</strong>, as future versions moved to the Windows NT kernel.
+            </p>
+            <p>Windows Phone 7 employed Microsoft's <strong>Metro</strong> UI, a design language focused on typography and simplified icons, as well as
+              <strong>Live Tiles</strong>, a fresh, colourful, tile-based home screen, with fluid transitions between screens. It looked markedly different to
+              its predecessors, and offered a unique alternative to Android and iOS.</p>
+            <p>Microsoft laid down minimum hardware specifications for Windows 7 handsets, which mandated <strong>5 physical buttons</strong>, for
+              <strong>Start</strong>, <strong>back</strong>, <strong>search</strong>, <strong>camera</strong>, and <strong>power.</strong>, as well as CPU, GPU,
+              screen, and connectivity requirements.</p>
+            <p>Device in class: <strong>HTC HD7</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/htc-hd7-4.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>32-bit colour<br>480&times;800</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>QWERTY keyboard<br>Touchscreen</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Snapdragon S1 1.0 GHz</td>
+                  </tr>
+                  <tr>
+                    <td>GPU</td>
+                    <td>Adreno 200</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>576 MB</td>
+                  </tr>
+                  <tr>
+                    <td>ROM</td>
+                    <td>512 MB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>162 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>122&times;68&times;11 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section12" id=section12>
+          <div>
+            <div class=section-heading>
+              <div class=date>2012</div>
+              <p class=title>Windows Phone 8</p>
+            </div>
+            <p>Based on Windows NT kernel, and sharing Windows 8 code, Windows Phone 8 release saw a unification of Microsoft's mobile and desktop offerings,
+              resulting in a more consistent experience for developers and users across platforms.</p>
+            <p>Resizable home screen tiles, 720p HD screens, Internet Explorer 10</p>
+            <p>Introduced in November 2011, the line is the result of a long-term partnership between Nokia and Microsoft—as such, most Lumia smartphones run
+              the Windows Phone operating system, excluding some later models which run the newer Windows 10 Mobile. The Lumia name is derived from the
+              partitive plural form of the Finnish word lumi, meaning "snow"</p>
+            <p>Device in class: <strong>Nokia Lumia 920</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/lumia-920.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>32-bit/16 M colours<br>1280&times;768</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Qualcomm Krait dual-core<br>1.5 GHz</td>
+                  </tr>
+                  <tr>
+                    <td>GPU</td>
+                    <td>Adreno 320</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>1 GB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>185 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>130&times;71&times;11 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section13" id=section13>
+          <div>
+            <div class=section-heading>
+              <div class=date>2014</div>
+              <p class=title>Windows Phone 8.1</p>
+            </div>
+            <p>Windows Phone 8.1 saw significant upgrades to the Windows OS.</p>
+            <p><strong>Cortana</strong>, Microsoft's voice activated digital assistant, came to the platform, and brought voice-based search to Windows Phone.
+            </p>
+            <p>A new notifications panel, called <strong>Action Center</strong>, was also introduced which vastly improved notifications in Windows Phone</p>
+            <p>Internet Explorer 11</p>
+            <p>Device in class: <strong>HTC One M8</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/htc-one-m8.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>32-bit/16 M colours<br>1280&times;768</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>Qualcomm Snapdragon 801<br>2.45 GHz</td>
+                  </tr>
+                  <tr>
+                    <td>GPU</td>
+                    <td>Adreno 330</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>2 GB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>160 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>146&times;71&times;9 mm</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section14" id=section14>
+          <div>
+            <div class=section-heading>
+              <div class=date>2015</div>
+              <p class=title>Windows 10 Mobile</p>
+            </div>
+            <p>This was the last iteration of the Windows Phone OS. It aimed to unify and provide greater consistency with its Windows 10 desktop counterpart.
+            </p>
+            <p>It provided the new <strong>Universal Windows Platform (UWP)</strong> which allowed apps to be built for and run across all Windows 10 devices,
+              whether desktop, mobile, or console.</p>
+            <p>Syncing was also improved between devices. For example, a notification dismissed on desktop would automatically be dismissed on mobile too.</p>
+            <p>Device in class: <strong>Microsoft Lumia 950 XL</strong></p>
+            <div class=device-container>
+              <div class=device-image> <img src=../img/microsoft-lumia-950-xl.png> </div>
+              <div class=device-features>
+                <table class=device-data>
+                  <tr>
+                    <td>Screen</td>
+                    <td>32-bit/16 M colours<br>1280&times;768</td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>Touchscreen</td>
+                  </tr>
+                  <tr>
+                    <td>CPU</td>
+                    <td>4&times;core Cortex A57 2GHz<br> + 4&times;core Cortex A53 1.5 GHz</td>
+                  </tr>
+                  <tr>
+                    <td>GPU</td>
+                    <td>Adreno 430</td>
+                  </tr>
+                  <tr>
+                    <td>RAM</td>
+                    <td>3 GB</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>165 g</td>
+                  </tr>
+                  <tr>
+                    <td>Size</td>
+                    <td>152&times;79&times;8</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section15" id=section15>
+          <div>
+            <div class=section-heading>
+              <div class=date>2017</div>
+              <p class=title>Windows Phone RIP</p>
+            </div>
+            <p> In October 2017 Microsoft's corporate vice president, Joe Belfiore, confirmed that, due to low market-share and lack of third-party development,
+              Microsoft will <strong>no longer sell or manufacture</strong> new Windows 10 Mobile devices.</p>
+            <p>Existing devices will receive bug fixes and security updates only.</p>
+            <p>So long, Windows Phone. <strong>We will miss you</strong>.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src=../js/cdnjs.cloudflare.com_ajax_libs_jquery_2.1.3_jquery.min.js></script>
+    <script src=../js/maxcdn.bootstrapcdn.com_bootstrap_3.3.6_js_bootstrap.min.js></script>
+    <script src=../js/background.js defer></script>
+    <script src="../js/time and date.js" defer></script>
+    <script src="../js/timeline scroll.js" defer></script>
+  </div>
+</body>
+
 </html>
