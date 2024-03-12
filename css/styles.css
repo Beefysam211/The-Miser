@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-feature-settings: "liga", "dlig";
 }
-p::first-letter {
+.capfirstletter::first-letter {
   initial-letter: 2;
 }
 .dark-mode a:visited,
