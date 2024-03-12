@@ -1,204 +1,230 @@
 <!doctype html>
 <html lang=en>
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic&display=swap" rel=stylesheet defer>
-<link rel=stylesheet href=css/styles.css media=screen>
-<link rel=stylesheet href=css/header.css media=screen>
-<link rel=stylesheet href="css/hamburger menu.css" media=screen>
-<meta name=google-site-verification content=BbCYjVmHkZSJBGxo6oT1F1b4_vyLQrOe_jdtqQoagnE>
-<title>Sam's Blog</title>
-<meta name=description content="Reviews, consoles, video games, politics, blog, android, windows, technology, economics">
-<meta name=msapplication-TileColor content=#2b5797>
-<meta name=theme-color content=#ffffff>
-<link rel=icon href=favicon/android-chrome-192x192.png type=image/png>
-<meta name=viewport content="width=device-width">
-<meta charset=UTF-8>
-<canvas id=c></canvas>
+  <link
+    href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic%7CDroid+Serif:400,700,400italic,700italic&display=swap"
+    rel=stylesheet defer>
+  <link rel=stylesheet href=css/styles.css media=screen>
+  <link rel=stylesheet href=css/header.css media=screen>
+  <link rel=stylesheet href="css/hamburger menu.css" media=screen>
+  <meta name=google-site-verification content=BbCYjVmHkZSJBGxo6oT1F1b4_vyLQrOe_jdtqQoagnE>
+  <title>Sam's Blog</title>
+  <meta name=description content="Reviews, consoles, video games, politics, blog, android, windows, technology, economics">
+  <meta name=msapplication-TileColor content=#2b5797>
+  <meta name=theme-color content=#ffffff>
+  <link rel=icon href=favicon/android-chrome-192x192.png type=image/png>
+  <meta name=viewport content="width=device-width">
+  <meta charset=UTF-8> <canvas id=c></canvas>
 </head>
+
 <body>
-<div id=menu>
-<div id=menu-bar onclick=menuOnClick()>
-<div id=bar1 class=bar></div>
-<div id=bar2 class=bar></div>
-<div id=bar3 class=bar></div>
-</div>
-<nav class=nav id=nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="pages/about.html">About</a></li>
-<li><a href=#>Portfolio</a></li>
-<li><a href=#>Store</a></li>
-</ul>
-</nav>
-</div>
-<div class=menu-bg id=menu-bg></div>
-<form>
-<input type=checkbox id=mode-toggle class=sr-only>
-<label for=mode-toggle class=toggle>
-<span class=slider></span>
-</label>
-</form>
-<div class=head>
-<div class=headerobjectswrapper>
-<div class=weatherforcastbox>
-<div class=tradingview-widget-container>
-<div class=tradingview-widget-container__widget></div>
-<div class=tradingview-widget-copyright><a href=https://in.tradingview.com/ rel="noopener nofollow" target=_blank><span class=blue-text>Track all markets on TradingView</span></a></div>
-<script src=https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js defer>
-{"symbols": [
-              {
-                "proName": "FOREXCOM:SPXUSD",
-                "title": "S&P 500 Index"
-              },
-              {
-                "proName": "BITSTAMP:BTCUSD",
-                "title": "Bitcoin"
-              },
-              {
-                "proName": "BITSTAMP:ETHUSD",
-                "title": "Ethereum"
-              },
-              {
-                "description": "India GDP",
-                "proName": "ECONOMICS:INGDP"
-              },
-              {
-                "description": "Nvidia",
-                "proName": "NASDAQ:NVDA"
-              },
-              {
-                "description": "Tesla",
-                "proName": "NASDAQ:TSLA"
-              },
-              {
-                "description": "Apple",
-                "proName": "NASDAQ:AAPL"
-              },
-              {
-                "description": "Amazon",
-                "proName": "NASDAQ:AMZN"
-              },
-              {
-                "description": "Meta",
-                "proName": "NASDAQ:META"
-              },
-              {
-                "description": "Microsoft",
-                "proName": "NASDAQ:MSFT"
-              },
-              {
-                "description": "Amd",
-                "proName": "NASDAQ:AMD"
-              },
-              {
-                "description": "Netflix",
-                "proName": "NASDAQ:NFLX"
-              },
-              {
-                "description": "Google",
-                "proName": "NASDAQ:GOOGL"
-              },
-              {
-                "description": "Nike",
-                "proName": "NYSE:NKE"
-              },
-              {
-                "description": "Oracle",
-                "proName": "NYSE:ORCL"
-              },
-              {
-                "description": "IBM",
-                "proName": "NYSE:IBM"
-              },
-              {
-                "description": "Mcdonalds",
-                "proName": "NYSE:MCD"
-              },
-              {
-                "description": "Electronic Arts",
-                "proName": "NASDAQ:EA"
-              },
-              {
-                "description": "Uber",
-                "proName": "NYSE:UBER"
-              },
-              {
-                "description": "Nasdaq",
-                "proName": "NASDAQ:NDAQ"
-              },
-              {
-                "description": "Twitter",
-                "proName": "NYSE:TWTR"
-              }
-              ],
-              "colorTheme": "light",
-              "isTransparent": 0,
-              "showSymbolLogo": 1,
-              "locale": "in"
-            }
-</script>
-</div>
-</div>
-<a href=/ >
-<header>The Miser </header>
-</a>
-<div class=subhead id=date>
-<body onload=display_ct()>
-<span id=ct></span>
-</body></div>
-</div>
-<div class=content>
-<div class=collumns>
-<div class=collumn>
-<div class=head><span class="headline hl3">When darkness overspreads my eyes</span>
-<p><span class="headline hl4">by JOHANN WOLFGANG VON GOETHE</span></p>
-</div>
-<p class="capfirstletter">When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God!</p>
-</div>
-<div class=collumn>
-<div class=head><span class="headline hl5">Give people courage</span>
-<p><span class="headline hl6">The crowd seemed to grow</span></p>
-</div>
-<p class="capfirstletter">The sunset faded to twilight before anything further happened. The crowd far away on the left, towards Woking, seemed to grow, and I heard now a faint murmur from it. The little knot of people towards Chobham dispersed. There was scarcely an intimation of movement from the pit.</p>
-<figure class=figure>
-<img class=media src=https://i.giphy.com/PW7MoTD2d9pJK.gif alt="" width="" height="">
-<figcaption class=figcaption>Hermine hoping for courage.</figcaption>
-</figure>
-It was this, as much as anything, that gave people courage, and I suppose the new arrivals from Woking also helped to restore confidence. At any rate, as the dusk came on a slow, intermittent movement upon the sand pits began, a movement that seemed to gather force as the stillness of the evening about the cylinder remained unbroken. Vertical black figures in twos and threes would advance, stop, watch, and advance again, spreading out as they did so in a thin irregular crescent that promised to enclose the pit in its attenuated horns. I, too, on my side began to move towards the pit. Then I saw some cabmen and others had walked boldly into the sand pits, and heard the clatter of hoofs and the gride of wheels. I saw a lad trundling off the barrow of apples. And then, within thirty yards of the pit, advancing from the direction of Horsell, I noted a little black knot of men, the foremost of whom was waving a white flag.
-</div>
-<div class=collumn>
-<div class=head><span class="headline hl1">May the Force be with you</span>
-<p><span class="headline hl2">Let go your conscious self and act on instinct</span></p>
-</div>
-<p class="capfirstletter">Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
-<figure class=figure>
-<img class=media src=https://i.giphy.com/4fDWVPMoSyhgc.gif alt="" width="" height="">
-<figcaption class=figcaption>"This time, let go your conscious self and act on instinct."</figcaption>
-</figure>
-Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class=citation>"Don't underestimate the Force. I suggest you try it again, Luke."</span>
-<p class="capfirstletter">This time,let go your conscious self and act on instinct. In my experience, there is no such thing as luck. You're all clear, kid. Let's blow this thing and go home! You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you refer to will soon be back in our hands. As you wish.</p>
-</div>
-<div class=collumn>
-<div class=head><span class="headline hl3">The buzz of the little world </span>
-<p><span class="headline hl4">A thousand unknown plants</span></p>
-</div>
-<p class="capfirstletter">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath</p>
-<span class=citation><a href="./pages/timeline scroll.html" class=removelinkdefault>The History Of The Windows Phone</a></span>
-<p><span class="headline hl4">10th November, 2023</span></p>
-<p class="capfirstletter">The windows phone has for a long time been antiquated in front of the public eye, yet in 2023 it has been running on life support by tightly knit small communities who love nothing but the windows platform. Many small developers have been keeping the long since discontinued platform alive by soft modding it and side loading modern applications for the windows phone like discord, reddit and twitter in 2023.
-</p>
-</div>
-<div class=collumn>
-<div class=head><span class="headline hl1">It wasn't a dream </span>
-<p><span class="headline hl4">by FRANZ KAFKA</span></p>
-</div>
-<p class="capfirstletter">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. </p>
-His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
-</div>
-</div>
-</div>
-<script src="js/time and date.js" defer></script>
-<script src=js/background.js defer></script>
-<script src="js/hamburger menu.js" defer></script>
-</div></body>
+  <div id=menu>
+    <div id=menu-bar onclick=menuOnClick()>
+      <div id=bar1 class=bar></div>
+      <div id=bar2 class=bar></div>
+      <div id=bar3 class=bar></div>
+    </div>
+    <nav class=nav id=nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href=#>Portfolio</a></li>
+        <li><a href=#>Store</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class=menu-bg id=menu-bg></div>
+  <form> <input type=checkbox id=mode-toggle class=sr-only> <label for=mode-toggle class=toggle> <span class=slider></span> </label> </form>
+  <div class=head>
+    <div class=headerobjectswrapper>
+      <div class=weatherforcastbox>
+        <div class=tradingview-widget-container>
+          <div class=tradingview-widget-container__widget></div>
+          <div class=tradingview-widget-copyright><a href=https://in.tradingview.com/ rel="noopener nofollow" target=_blank><span class=blue-text>Track all
+                markets on TradingView</span></a></div>
+          <script src=https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js defer>
+            {"symbols": [
+                          {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500 Index"
+                          },
+                          {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                          },
+                          {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                          },
+                          {
+                            "description": "India GDP",
+                            "proName": "ECONOMICS:INGDP"
+                          },
+                          {
+                            "description": "Nvidia",
+                            "proName": "NASDAQ:NVDA"
+                          },
+                          {
+                            "description": "Tesla",
+                            "proName": "NASDAQ:TSLA"
+                          },
+                          {
+                            "description": "Apple",
+                            "proName": "NASDAQ:AAPL"
+                          },
+                          {
+                            "description": "Amazon",
+                            "proName": "NASDAQ:AMZN"
+                          },
+                          {
+                            "description": "Meta",
+                            "proName": "NASDAQ:META"
+                          },
+                          {
+                            "description": "Microsoft",
+                            "proName": "NASDAQ:MSFT"
+                          },
+                          {
+                            "description": "Amd",
+                            "proName": "NASDAQ:AMD"
+                          },
+                          {
+                            "description": "Netflix",
+                            "proName": "NASDAQ:NFLX"
+                          },
+                          {
+                            "description": "Google",
+                            "proName": "NASDAQ:GOOGL"
+                          },
+                          {
+                            "description": "Nike",
+                            "proName": "NYSE:NKE"
+                          },
+                          {
+                            "description": "Oracle",
+                            "proName": "NYSE:ORCL"
+                          },
+                          {
+                            "description": "IBM",
+                            "proName": "NYSE:IBM"
+                          },
+                          {
+                            "description": "Mcdonalds",
+                            "proName": "NYSE:MCD"
+                          },
+                          {
+                            "description": "Electronic Arts",
+                            "proName": "NASDAQ:EA"
+                          },
+                          {
+                            "description": "Uber",
+                            "proName": "NYSE:UBER"
+                          },
+                          {
+                            "description": "Nasdaq",
+                            "proName": "NASDAQ:NDAQ"
+                          },
+                          {
+                            "description": "Twitter",
+                            "proName": "NYSE:TWTR"
+                          }
+                          ],
+                          "colorTheme": "light",
+                          "isTransparent": 0,
+                          "showSymbolLogo": 1,
+                          "locale": "in"
+                        }
+          </script>
+        </div>
+      </div> <a href= />
+      <header>The Miser </header> </a>
+      <div class=subhead id=date>
+
+        <body onload=display_ct()> <span id=ct></span> </body>
+      </div>
+    </div>
+    <div class=content>
+      <div class=collumns>
+        <div class=collumn>
+          <div class=head><span class="headline hl3">When darkness overspreads my eyes</span>
+            <p><span class="headline hl4">by JOHANN WOLFGANG VON GOETHE</span></p>
+          </div>
+          <p class="capfirstletter">When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the
+            impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the
+            trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the
+            stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us
+            in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my
+            friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress,
+            then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within
+            me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God!</p>
+        </div>
+        <div class=collumn>
+          <div class=head><span class="headline hl5">Give people courage</span>
+            <p><span class="headline hl6">The crowd seemed to grow</span></p>
+          </div>
+          <p class="capfirstletter">The sunset faded to twilight before anything further happened. The crowd far away on the left, towards Woking, seemed to
+            grow, and I heard now a faint murmur from it. The little knot of people towards Chobham dispersed. There was scarcely an intimation of movement from
+            the pit.</p>
+          <figure class=figure> <img class=media src=https://i.giphy.com/PW7MoTD2d9pJK.gif alt="" width="" height="">
+            <figcaption class=figcaption>Hermine hoping for courage.</figcaption>
+          </figure> It was this, as much as anything, that gave people courage, and I suppose the new arrivals from Woking also helped to restore confidence. At
+          any rate, as the dusk came on a slow, intermittent movement upon the sand pits began, a movement that seemed to gather force as the stillness of the
+          evening about the cylinder remained unbroken. Vertical black figures in twos and threes would advance, stop, watch, and advance again, spreading out
+          as they did so in a thin irregular crescent that promised to enclose the pit in its attenuated horns. I, too, on my side began to move towards the
+          pit. Then I saw some cabmen and others had walked boldly into the sand pits, and heard the clatter of hoofs and the gride of wheels. I saw a lad
+          trundling off the barrow of apples. And then, within thirty yards of the pit, advancing from the direction of Horsell, I noted a little black knot of
+          men, the foremost of whom was waving a white flag.
+        </div>
+        <div class=collumn>
+          <div class=head><span class="headline hl1">May the Force be with you</span>
+            <p><span class="headline hl2">Let go your conscious self and act on instinct</span></p>
+          </div>
+          <p class="capfirstletter">Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have traced the Rebel spies to her. Now
+            she is my only link to finding their secret base.</p>
+          <figure class=figure> <img class=media src=https://i.giphy.com/4fDWVPMoSyhgc.gif alt="" width="" height="">
+            <figcaption class=figcaption>"This time, let go your conscious self and act on instinct."</figcaption>
+          </figure> Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class=citation>"Don't underestimate the
+            Force. I suggest you try it again, Luke."</span>
+          <p class="capfirstletter">This time,let go your conscious self and act on instinct. In my experience, there is no such thing as luck. You're all
+            clear, kid. Let's blow this thing and go home! You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you
+            refer to will soon be back in our hands. As you wish.</p>
+        </div>
+        <div class=collumn>
+          <div class=head><span class="headline hl3">The buzz of the little world </span>
+            <p><span class="headline hl4">A thousand unknown plants</span></p>
+          </div>
+          <p class="capfirstletter">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist
+            than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of
+            my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie
+            close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with
+            the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
+          </p> <span class=citation><a href="./pages/timeline scroll.html" class=removelinkdefault>The History Of The Windows Phone</a></span>
+          <p><span class="headline hl4">10th November, 2023</span></p>
+          <p class="capfirstletter">The windows phone has for a long time been antiquated in front of the public eye, yet in 2023 it has been running on life
+            support by tightly knit small communities who love nothing but the windows platform. Many small developers have been keeping the long since
+            discontinued platform alive by soft modding it and side loading modern applications for the windows phone like discord, reddit and twitter in 2023.
+          </p>
+        </div>
+        <div class=collumn>
+          <div class=head><span class="headline hl1">It wasn't a dream </span>
+            <p><span class="headline hl4">by FRANZ KAFKA</span></p>
+          </div>
+          <p class="capfirstletter">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He
+            lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff
+            sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. </p> His many legs, pitifully thin compared with the
+          size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room
+          although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a
+          travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the
+          viewer. Gregor then turned to look out the window at the dull weather.
+        </div>
+      </div>
+    </div>
+    <script src="js/time and date.js" defer></script>
+    <script src=js/background.js defer></script>
+    <script src="js/hamburger menu.js" defer></script>
+  </div>
+</body>
+
 </html>
