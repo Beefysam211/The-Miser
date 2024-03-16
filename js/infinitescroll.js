@@ -6,18 +6,20 @@ const statusElement = document.querySelector('.scroller-status');
 // Keep track of the current page URL
 let currentPageURL = nextPageLink ? nextPageLink.href : null;
 
-// Add a scroll event listener to the window
-window.addEventListener('scroll', handleScroll);
+// Create a new IntersectionObserver instance
+const observer = new IntersectionObserver(handleIntersection, { rootMargin: '0px 0px 200px 0px' });
 
-// Function to handle scroll events
-function handleScroll() {
-  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+// Observe the status element
+observer.observe(statusElement);
 
-  // Check if the user has scrolled near the bottom of the page
-  if (scrollTop + clientHeight >= scrollHeight - 10) {
-    // Fetch and append new content
-    fetchAndAppendContent();
-  }
+// Function to handle intersection events
+function handleIntersection(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Fetch and append new content
+      fetchAndAppendContent();
+    }
+  });
 }
 
 // Function to fetch and append new content
