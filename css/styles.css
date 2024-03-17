@@ -1,3 +1,10 @@
+.page-load-status {
+  display: inline; /* hidden by default */
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+}
 a,
 body {
   color: #000;
