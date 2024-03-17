@@ -145,7 +145,7 @@
       </div>
     </div>
     <div class=content>
-      <div class=collumns data-infinite-scroll='{ "path": ".pagination__next", "append": ".collumn", "history": false }'>
+      <div class=collumns>
         <div class=collumn >
           <div class=head><span class="headline hl3">When darkness overspreads my eyes</span>
             <p><span class="headline hl4">by JOHANN WOLFGANG VON GOETHE</span></p>
@@ -220,29 +220,30 @@
           viewer. Gregor then turned to look out the window at the dull weather.
         </div>
       </div>
-
-<!-- pagination has path -->
-    <div class="pagination">
-  <span class="pagination__current">Page 1</span>
-  <a class="pagination__next" href="/pages/page2.html">Next</a>
-  <a class="pagination__next" href="/pages/page3.html">Next</a>
     </div>
-  </div>
 
   <div class="page-load-status">
-    <div class="loader-ellips infinite-scroll-request">
+    <!-- <div class="loader-ellips">
       <span class="loader-ellips__dot"></span>
       <span class="loader-ellips__dot"></span>
       <span class="loader-ellips__dot"></span>
       <span class="loader-ellips__dot"></span>
-    </div>
+    </div> -->
     <p class="infinite-scroll-last">End of content</p>
     <p class="infinite-scroll-error">No more pages to load</p>
   </div>
-    
+  
+  <div class="pagination">
+    <span class="pagination__current">Page 1</span>
+    <a class="pagination__next" href="pages/page2.html">Next</a>
+    <a class="pagination__next" href="pages/page3.html">Next</a>
+  </div>
+  
     <script src="js/timeanddate.js" defer></script>
     <script src=js/background.js defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/infinite-scroll-pkgd.js" defer></script>
+    <script src="js/initinfinitescroll.js" defer></script>
     <script src="js/hamburgermenu.js" defer></script>
     
 </body>
