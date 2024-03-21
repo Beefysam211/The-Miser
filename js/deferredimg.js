@@ -1,0 +1,3 @@
+window.addEventListener('load',function(){var imageUrls=['https://i.giphy.com/PW7MoTD2d9pJK.gif','https://i.giphy.com/4fDWVPMoSyhgc.gif',];var loadedImages=[];var imagesToLoad=imageUrls.length;function preloadImages(){imageUrls.forEach(function(url,index){var img=new Image();img.onload=function(){loadedImages[index]=img;imagesToLoad--;if(imagesToLoad===0){updateImgElements()}};img.src=url})}
+function updateImgElements(){var images=document.querySelectorAll('#deferred-figures .media');images.forEach(function(img,index){img.removeAttribute('src');img.src=loadedImages[index].src})}
+preloadImages()})
