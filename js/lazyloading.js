@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll('img[src$=".webp"]'),t=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){const r=e.target;r.src=r.dataset.src,t.unobserve(r)}})},{rootMargin:"100px 0px"});e.forEach(e=>{const r=e.src;e.dataset.src=r,e.src="",t.observe(e)})}));
