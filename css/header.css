@@ -1,1 +1,22 @@
-header:hover{color:#2196f3;cursor:pointer}.dark-mode a,a,header{transition:background-color 0.3s,color 0.3s,transform 0.3s}.dark-mode a:hover,a:hover{color:#f3de21;cursor:pointer}.removelinkdefault{color:#000;text-decoration:none}
+header:hover {
+  color: #2196f3;
+  cursor: pointer;
+}
+.dark-mode a,
+a,
+header {
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+.dark-mode a:hover,
+a:hover {
+  color: #f3de21;
+  cursor: pointer;
+}
+.removelinkdefault {
+  color: #000;
+  text-decoration: none;
+}
+
