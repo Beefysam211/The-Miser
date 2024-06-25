@@ -15,3 +15,6 @@ Features:
 https://themiser.web.app/
 https://themiser.netlify.app/
 https://themiser.vercel.app/
+
+## Github Stats
+![Alt](https://repobeats.axiom.co/api/embed/f6513524014cb8614d28034cd316aaaa502a00bf.svg "Repobeats analytics image")
