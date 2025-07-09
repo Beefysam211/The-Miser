@@ -1,1 +1,109 @@
-.bar,.menu-bg,.nav{transition:0.3s}#menu{z-index:2}#menu-bar{width:45px;height:40px;margin:15px 0 20px 8px;cursor:pointer}.bar{height:5px;width:100%;background-color:#000;display:block;border-radius:5px}#bar1{transform:translateY(-4px)}#bar3{transform:translateY(4px)}.nav{display:none}.nav ul{padding:0 8px}.nav li{list-style:none;padding:11px 0}.nav li a{color:#000;font-size:20px;text-decoration:none}.dark-mode .nav li a{color:#fff}.nav li a:hover{font-weight:700}#menu,.menu-bg{top:0;left:0;position:absolute}.dark-mode .bar{background-color:#fff}.menu-bg{z-index:1;width:0;height:0;margin:30px 0 20px 20px;background:radial-gradient(circle,#dc052d,#dc052d);border-radius:50%}.change{display:block}.change .bar{background-color:#000}.dark-mode .bar{background-color:#fff}.change #bar1{transform:translateY(4px) rotateZ(-45deg)}.change #bar2{opacity:0}.change #bar3{transform:translateY(-6px) rotateZ(45deg)}.change-bg{width:520px;height:460px;transform:translate(-60%,-30%)}
+.bar,
+.menu-bg,
+.nav {
+    transition: 0.3s
+}
+
+#menu {
+    z-index: 2
+}
+
+#menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 15px 0 20px 8px;
+    cursor: pointer
+}
+
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: #000;
+    display: block;
+    border-radius: 5px
+}
+
+#bar1 {
+    transform: translateY(-4px)
+}
+
+#bar3 {
+    transform: translateY(4px)
+}
+
+.nav {
+    display: none
+}
+
+.nav ul {
+    padding: 0 8px
+}
+
+.nav li {
+    list-style: none;
+    padding: 11px 0
+}
+
+.nav li a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.dark-mode .nav li a {
+    color: #f9f7f1
+}
+
+.nav li a:hover {
+    font-weight: 700
+}
+
+#menu,
+.menu-bg {
+    top: 0;
+    left: 0;
+    position: absolute
+}
+
+.dark-mode .bar {
+    background-color: #f9f7f1
+}
+
+.menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #dc052d, #dc052d);
+    border-radius: 50%
+}
+
+.change {
+    display: block
+}
+
+.change .bar {
+    background-color: #212427
+}
+
+.dark-mode .bar {
+    background-color: #f9f7f1
+}
+
+.change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg)
+}
+
+.change #bar2 {
+    opacity: 0
+}
+
+.change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg)
+}
+
+.change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(-60%, -30%)
+}

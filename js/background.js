@@ -21,9 +21,8 @@ function u() {
   let e, m, h, u, k, w, y, M, L, b, v, E, S, I, z, p;
   n.save(),
     g
-      ? ((n.fillStyle = "rgb(0, 0, 0)"), (n.strokeStyle = "rgb(255, 255, 255)"))
-      : ((n.fillStyle = "rgb(255, 255, 255)"),
-        (n.strokeStyle = "rgb(0, 0, 0)")),
+      ? ((n.fillStyle = "rgb(15, 15, 15)"), (n.strokeStyle = "rgb(249, 247, 241)"))
+      : ((n.fillStyle = "rgb(249, 247, 241)"), (n.strokeStyle = "rgb(33, 36, 39)")),
     n.fillRect(0, 0, t, o),
     n.restore(),
     (n.strokeStyle = g ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)"),
