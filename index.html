@@ -9,6 +9,17 @@
   <script src="/js/timeanddate.js" async></script>
   <meta charset=UTF-8>
   <title>Sam's Blog</title>
+  <!-- Preload WOFF2 font files for Playfair Display and Droid Serif -->
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-900italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/playfair-display-v39-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name=description content="Reviews, consoles, video games, politics, blog, android, windows, technology, economics">
   <link rel=icon href="/img/favicon/android-chrome-192x192.png" type=image/png>
@@ -49,7 +60,7 @@
           <div class=tradingview-widget-copyright><a href=https://in.tradingview.com/ rel="noopener nofollow"
               target=_blank><span class=blue-text>Track all
                 markets on TradingView</span></a></div>
-          <script src=https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js async>
+          <script src="/js/embed-widget-ticker-tape.js" async>
             {
               "symbols": [
                 {
@@ -137,10 +148,12 @@
                   "proName": "NYSE:TWTR"
                 }
               ],
-                "colorTheme": "light",
-                  "isTransparent": 0,
-                    "showSymbolLogo": 1,
-                      "locale": "in"
+              "colorTheme": "light",
+              "locale": "en",
+              "largeChartUrl": "",
+              "isTransparent": false,
+              "showSymbolLogo": true,
+              "displayMode": "compact"
             }
           </script>
         </div>
