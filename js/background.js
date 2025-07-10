@@ -22,7 +22,7 @@ function u() {
   n.save(),
     g
       ? ((n.fillStyle = "rgb(15, 15, 15)"), (n.strokeStyle = "rgb(249, 247, 241)"))
-      : ((n.fillStyle = "rgb(249, 247, 241)"), (n.strokeStyle = "rgb(33, 36, 39)")),
+      : ((n.fillStyle = "rgb(249, 247, 241)"), (n.strokeStyle = "rgb(15, 15, 15))),
     n.fillRect(0, 0, t, o),
     n.restore(),
     (n.strokeStyle = g ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)"),
