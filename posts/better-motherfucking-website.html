@@ -1,90 +1,748 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Better Motherfucking Website</title>
-    <style type="text/css">
-        body {
-            margin: 40px auto;
-            max-width: 650px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #444;
-            padding: 0 10px
+    <style>
+        /* ibm-plex-serif-regular - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'IBM Plex Serif';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/fonts/ibm-plex-serif-v19-latin-regular.woff2') format('woff2');
         }
 
-        h1,
-        h2,
-        h3 {
-            line-height: 1.2
+        /* ibm-plex-serif-italic - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'IBM Plex Serif';
+            font-style: italic;
+            font-weight: 400;
+            src: url('/fonts/ibm-plex-serif-v19-latin-italic.woff2') format('woff2');
         }
+
+        /* ibm-plex-serif-700 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'IBM Plex Serif';
+            font-style: normal;
+            font-weight: 700;
+            src: url('/fonts/ibm-plex-serif-v19-latin-700.woff2') format('woff2');
+        }
+
+        /* ibm-plex-serif-700italic - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'IBM Plex Serif';
+            font-style: italic;
+            font-weight: 700;
+            src: url('/fonts/ibm-plex-serif-v19-latin-700italic.woff2') format('woff2');
+        }
+
+        :root {
+            --header-height: 100px; /* Adjust based on actual header height */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1D1B1E;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+        }
+
+        header {
+            width: 100%;
+            background: #1D1B1E;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+            aria-hidden: true;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            line-height: 1.2;
+        }
+
+        header aside {
+            margin: 10px 0 0;
+            font-style: italic;
+        }
+
+        .container {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 15px; /* Space for fixed TOC */
+            margin-top: calc(var(--header-height)); /* Offset below header */
+            transition: margin-top 0.2s ease;
+            box-shadow: 0 0 10px #00000080;
+        }
+
+        .container.header-hidden {
+            margin-top: 0;
+        }
+
+        nav {
+            position: fixed;
+            left: 0;
+            top: calc(var(--header-height)); /* Start below header */
+            width: 360px;
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            padding: 20px 10px;
+            background: #f7f7f7;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f7f7f7;
+            transition: top 0.2s ease, height 0.2s ease;
+            box-shadow: 0 0 10px #00000080;
+        }
+
+        nav.header-hidden {
+            top: 0;
+            height: 100vh;
+        }
+
+        nav::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        nav::-webkit-scrollbar-track {
+            background: #f7f7f7;
+        }
+
+        nav::-webkit-scrollbar-thumb {
+            background: #919598;
+            border-radius: 4px;
+        }
+
+        nav::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+
+        .toc-list {
+            padding: 0;
+            margin: 0;
+            padding-bottom: 20px; /* Ensure last heading is visible */
+        }
+
+        .visually-hidden {
+            clip: rect(0 0 0 0);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+        }
+
+        .toc-list, .toc-list ol {
+            list-style-type: none;
+        }
+
+        .toc-list ol {
+            padding-inline-start: 2ch;
+        }
+
+        .toc-list > li > a {
+            font-weight: bold;
+            margin-block-start: 1em;
+        }
+
+        .toc-list li > a {
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: auto max-content;
+            align-items: end;
+            color: #1D1B1E;
+        }
+
+        .toc-list li > a:hover {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        .toc-list li > a > .title {
+            position: relative;
+            overflow: hidden;
+            padding-right: 10px; /* Prevent scrollbar clipping */
+        }
+
+        .toc-list li > a .leaders::after {
+            position: absolute;
+            padding-inline-start: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . "
+                     ". . . . . . . . . . . . . . . . . . . . . . . "
+                     ". . . . . . . . . . . . . . . . . . . . . . . "
+                     ". . . . . . . . . . . . . . . . . . . . . . . "
+                     ". . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+
+        .toc-list li > a > .page {
+            min-width: 2ch;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+
+        main {
+            max-width: 650px;
+            flex-grow: 1;
+            padding: 20px 10px;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            font-family: 'IBM Plex Serif', serif;
+            margin: 20px 0 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        p, ul, blockquote {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #1D1B1E;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #000080;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #1D1B1E;
+            margin: 20px 0;
+        }
+
+        ul {
+            padding-left: 15px;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                position: static;
+            }
+
+            .container {
+                flex-direction: column;
+                padding-left: 0;
+                margin-top: 0;
+            }
+
+            nav {
+                position: static;
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+                overflow-y: auto;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding: 10px;
+            }
+
+            nav.header-hidden {
+                top: 0;
+                height: auto;
+            }
+
+            main {
+                max-width: 650px;
+                width: 100%;
+                padding: 20px 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px;
+            }
+
+            header {
+                padding: 15px 10px;
+            }
+        }
+        .compare {
+  --mask-width: 50%;
+  --handle-size: 32px;
+
+  position: relative;
+  border: 1px solid rgb(0 0 0 / 0.05);
+}
+
+.compare__separator {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: var(--mask-width);
+  width: 2px;
+  margin-left: -1px;
+  background: black;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.compare__image-one {
+  width: 100%;
+  display: block;
+}
+
+.compare__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  background: white;
+  overflow: hidden;
+  width: var(--mask-width);
+}
+
+.compare__image-two {
+  height: 100%;
+  width: auto;
+}
+
+.compare__input {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  top: 0;
+  left: calc(var(--handle-size) / -2);
+  width: calc(100% + var(--handle-size));
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: col-resize;
+  background-color: transparent;
+}
+
+/* Firefox */
+.compare__input::-moz-range-track {
+  height: 100%;
+}
+
+.compare__input::-moz-range-thumb {
+  height: 100%;
+  border-radius: 0;
+  width: var(--handle-size);
+  border: none;
+}
+
+/* Webkit */
+.compare__input::-webkit-slider-runnable-track {
+  height: 100%;
+}
+
+.compare__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 100%;
+  border-radius: 0;
+  width: var(--handle-size);
+  border: none;
+}
+
+.compare__icon {
+  position: absolute;
+  z-index: 2;
+  color: #333;
+  width: var(--handle-size);
+  height: var(--handle-size);
+  top: 50%;
+  left: var(--mask-width);
+  transform: translate(-50%, -50%);
+  padding: 6px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+}
+
+.compare__icon path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+/* ----- DEMO AND DEBUG ----- */
+:root {
+  --light-green: #2ecc71;
+  --blue: #3498db;
+  --red: #e74c3c;
+
+  --blue-rgb: 52 152 219;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  padding: 80px 40px;
+  background: #e4e4f5;
+  font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    source-sans-pro, sans-serif;
+} */
+
+a {
+  color: currentColor;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+button {
+  font: inherit;
+  margin: 20px 0;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  padding: 6px 12px;
+  background: white;
+  transition: transform 200ms, background-color 200ms;
+  will-change: transform, background-color;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-right: 4px;
+  min-width: 40px;
+}
+
+button:hover {
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text {
+  text-align: center;
+}
+
+.compare {
+  transform-style: preserve-3d;
+}
+
+.compare,
+.compare__mask,
+.compare__input,
+.compare__image-one,
+.compare__separator {
+  will-change: transform;
+  transition: transform 1000ms, outline 1000ms, box-shadow 1000ms,
+    opacity 1000ms;
+  transition-timing-function: ease-out;
+  outline: 2px solid transparent;
+}
+
+.compare__input::-moz-range-thumb {
+  transition-timing-function: ease-out;
+  transition: outline 1000ms, background-color 1000ms;
+  outline: 2px solid transparent;
+}
+
+.compare__input::-webkit-slider-thumb {
+  transition-timing-function: ease-out;
+  transition: outline 1000ms, background-color 1000ms;
+  outline: 2px solid transparent;
+}
+
+.debug {
+  --step: 120px;
+
+  .compare {
+    transform: scale(0.75) translateY(5%) rotateX(30deg) rotateZ(10deg);
+  }
+
+  .compare__image-one {
+    outline-color: var(--red);
+  }
+
+  .compare__mask {
+    outline-color: var(--light-green);
+    transform: translateZ(var(--step));
+    box-shadow: 0 calc(var(--step) * 0.66) 5px rgb(0 0 0 / 0.05);
+  }
+
+  .compare__input {
+    opacity: 1;
+    outline-color: var(--blue);
+    transform: translateZ(calc(var(--step) * 2));
+  }
+
+  .compare__separator {
+    transform: translateZ(calc(var(--step) * 3));
+  }
+
+  .compare__input::-moz-range-thumb {
+    outline-color: var(--blue);
+    background-color: rgb(var(--blue-rgb) / 0.1);
+  }
+
+  .compare__input::-webkit-slider-thumb {
+    outline-color: var(--blue);
+    background-color: rgb(var(--blue-rgb) / 0.1);
+  }
+}
+
     </style>
 </head>
-
 <body>
     <header>
-        <h1>This is <em>still</em> a motherfucking website.</h1>
+        <h1 id="this-is-still-a-motherfucking-website">This is <em>still</em> a motherfucking website.</h1>
         <aside>And it's more fucking perfect than the last guy's.</aside>
     </header>
-    <h2>Seriously, it takes minimal fucking effort to improve this shit.</h2>
-    <p><strong>7 fucking declarations.</strong></p>
-    <p>That's how much CSS it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a>
-        into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the
-        original perfect-ass website:</p>
-    <ul>
-        <li>Shit's <em>still</em> lightweight and loads fast</li>
-        <li><em>Still</em> fits on all your shitty screens</li>
-        <li><em>Still</em> looks the same in all your shitty browsers</li>
-        <li>The motherfucker's <em>still</em> accessible to every asshole that visits your site</li>
-        <li>Shit's <em>still</em> legible and gets your fucking point across</li>
-    </ul>
-    <h3>And guess what, motherfucker:</h3>
-    <p>You never knew it, but it's easy to improve readability on your site. Here's how.</p>
-    <h2>Let it breathe</h2>
-    <p>Look
-        at lines 1 and 2 of some shitty website you're building. Assuming
-        they're not married they probably shouldn't be humping. The defaults are
-        trash -- pick a minimum <code>line-height: 1.4</code> for body copy. Headings should be tighter. If you can't
-        see that...piss off.</p>
-    <p>If your text hits the side of the browser, fuck off forever. You ever see a book like that? Yes? What a shitty
-        book.</p>
-    <h2>A little less contrast</h2>
-    <p>Black
-        on white? How often do you see that kind of contrast in real life? Tone
-        it down a bit, asshole. I would've even made this site's background a
-        nice <code>#EEEEEE</code> if I wasn't so focused on keeping declarations to a lean 7 fucking lines.</p>
-    <h2>Size Matters</h2>
-    <p>I
-        know your partner says otherwise, but it's true. Bump that body copy to
-        render close to 16px or more. Smaller type works well for print, not
-        the screen.</p>
-    <h2>Line-width, motherfucker</h2>
-    <p>Looking at an LCD
-        screen is strainful enough. Don't make me read a line of text that's 200
-        fucking characters long. Keep it to a nice 60-80 and users might
-        actually read more than one sentence of your worthless dribble.</p>
-    <h3>Yes, this is <em>also</em> fucking satire, you fuck</h3>
-    <p>I love what the creator of <a href="http://motherfuckingwebsite.com/">this site's inspiration</a>
-        did. What I'm saying is that it's so, so simple to make sites easier to
-        read. Websites are broken by default, they are functional,
-        high-performing, and accessible, but they're also fucking ugly. You and
-        all the other web designers out there need to make them not total shit.</p>
-    <blockquote>"You're a fucking moron if you use default browser styles."
-        <br>
-        - Eleanor Roosevelt
-    </blockquote>
-    <hr>
-    <h2>Epilogue</h2>
-    <p>Inspired by the geniuses behind <a href="http://motherfuckingwebsite.com/">motherfuckingwebsite.com</a> and <a
-            href="http://txti.es/">txti</a>.</p>
-    <p>This page—that isn't a total fucking eyesore—was created by <a href="https://twitter.com/drew_mc">me</a> with
-        help from <a href="https://twitter.com/gabehammersmith">him</a>.
-        <script async="" src="Better%20Motherfucking%20Website_files/google-analytics_analytics.js"></script>
-        <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-46163202-2', 'auto'); ga('send', 'pageview');</script>
-    </p>
-</body>
+    <div class="container">
+        <nav>
+            <h2 class="visually-hidden">Table of Contents</h2>
+            <h2>Table of Contents</h2>
+            <ul class="toc-list">
+                <li><a href="#this-is-still-a-motherfucking-website"><span class="title">This is still a motherfucking website.<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>1</span></a></li>
+                <li><a href="#seriously-it-takes-minimal-effort"><span class="title">Seriously, it takes minimal fucking effort to improve this shit.<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>1</span></a>
+                    <ol>
+                        <li><a href="#and-guess-what-motherfucker"><span class="title">And guess what, motherfucker:<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>1</span></a></li>
+                    </ol>
+                </li>
+                <li><a href="#let-it-breathe"><span class="title">Let it breathe<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>1</span></a></li>
+                <li><a href="#a-little-less-contrast"><span class="title">A little less contrast<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>2</span></a></li>
+                <li><a href="#size-matters"><span class="title">Size Matters<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>2</span></a></li>
+                <li><a href="#line-width-motherfucker"><span class="title">Line-width, motherfucker<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>2</span></a></li>
+                <li><a href="#yes-this-is-also-satire"><span class="title">Yes, this is also fucking satire, you fuck<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>2</span></a></li>
+                <li><a href="#seriously-what-the-fuck-else"><span class="title">Seriously, what the fuck else do you want?<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>3</span></a>
+                    <ol>
+                        <li><a href="#its-fucking-lightweight"><span class="title">It's fucking lightweight<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>3</span></a></li>
+                        <li><a href="#its-responsive"><span class="title">It's responsive<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>3</span></a></li>
+                        <li><a href="#it-fucking-works"><span class="title">It fucking works<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>3</span></a></li>
+                        <li><a href="#this-is-a-website"><span class="title">This is a website. Look at it. You've never seen one before.<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>4</span></a></li>
+                        <li><a href="#yes-this-is-fucking-satire"><span class="title">Yes, this is fucking satire, you fuck<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>4</span></a></li>
+                    </ol>
+                </li>
+                <li><a href="#epilogue"><span class="title">Epilogue<span class="leaders" aria-hidden="true"></span></span><span class="page"><span class="visually-hidden">Page </span>4</span></a></li>
+            </ul>
+        </nav>
 
+        <main>
+            
+            <h2 id="seriously-it-takes-minimal-effort">Seriously, it takes minimal fucking effort to improve this shit.</h2>
+            <p><strong>7 fucking declarations.</strong></p>
+            <p>That's how much CSS it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a> into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the original perfect-ass website:</p>
+            <ul>
+                <li>Shit's <em>still</em> lightweight and loads fast</li>
+                <li><em>Still</em> fits on all your shitty screens</li>
+                <li><em>Still</em> looks the same in all your shitty browsers</li>
+                <li>The motherfucker's <em>still</em> accessible to every asshole that visits your site</li>
+                <li>Shit's <em>still</em> legible and gets your fucking point across</li>
+            </ul>
+            <h3 id="and-guess-what-motherfucker">And guess what, motherfucker:</h3>
+            <p>You never knew it, but it's easy to improve readability on your site. Here's how.</p>
+            <h2 id="let-it-breathe">Let it breathe</h2>
+            <p>Look at lines 1 and 2 of some shitty website you're building. Assuming they're not married they probably shouldn't be humping. The defaults are trash -- pick a minimum <code>line-height: 1.4</code> for body copy. Headings should be tighter. If you can't see that...piss off.</p>
+            <p>If your text hits the side of the browser, fuck off forever. You ever see a book like that? Yes? What a shitty book.</p>
+            <h2 id="a-little-less-contrast">A little less contrast</h2>
+            <p>Black on white? How often do you see that kind of contrast in real life? Tone it down a bit, asshole. I would've even made this site's background a nice <code>#EEEEEE</code> if I wasn't so focused on keeping declarations to a lean 7 fucking lines.</p>
+            <h2 id="size-matters">Size Matters</h2>
+            <p>I know your partner says otherwise, but it's true. Bump that body copy to render close to 16px or more. Smaller type works well for print, not the screen.</p>
+            
+            <hr>
+                        <div class="compare" style="overflow: visible;">
+    <img class="compare__image-one" src="https://muffinman.io/blog/image-comparison-slider/letters-01.jpg">
+
+    <div class="compare__mask">
+      <img class="compare__image-two" src="https://muffinman.io/blog/image-comparison-slider/letters-02.png">
+    </div>
+
+    <div class="compare__separator">
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="compare__icon" viewBox="0 0 16 16">
+        <path d="M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14" stroke="currentColor"></path>
+      </svg>
+    </div>
+
+    <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
+
+  </div>
+
+  <div class="text">
+    <button class="toggle-debug">Toggle debug</button>
+
+    <p>
+      Drawings are from the book <a href="https://lettersfromsarajevo.com/en/about#the-drawings">Letters from
+        Sarajevo</a>.
+    </p>
+  </div>
+  <hr>
+            
+            <h2 id="line-width-motherfucker">Line-width, motherfucker</h2>
+            <p>Looking at an LCD screen is strainful enough. Don't make me read a line of text that's 200 fucking characters long. Keep it to a nice 60-80 and users might actually read more than one sentence of your worthless dribble.</p>
+            <h3 id="yes-this-is-also-satire">Yes, this is <em>also</em> fucking satire, you fuck</h3>
+            <p>I love what the creator of <a href="http://motherfuckingwebsite.com/">this site's inspiration</a> did. What I'm saying is that it's so, so simple to make sites easier to read. Websites are broken by default, they are functional, high-performing, and accessible, but they're also fucking ugly. You and all the other web designers out there need to make them not total shit.</p>
+            <blockquote>"You're a fucking moron if you use default browser styles."<br>- Eleanor Roosevelt</blockquote>
+            <hr>
+            <h2 id="seriously-what-the-fuck-else">Seriously, what the fuck else do you want?</h2>
+            <p>You probably build websites and think your shit is special. You think your 13 megabyte parallax-ative home page is going to get you some fucking Awwward banner you can glue to the top corner of your site. You think your 40-pound jQuery file and 83 polyfills give IE7 a boner because it finally has box-shadow. Wrong, motherfucker. Let me describe your perfect-ass website:</p>
+            <ul>
+                <li>Shit's lightweight and loads fast</li>
+                <li>Fits on all your shitty screens</li>
+                <li>Looks the same in all your shitty browsers</li>
+                <li>The motherfucker's accessible to every asshole that visits your site</li>
+                <li>Shit's legible and gets your fucking point across (if you had one instead of just 5mb pics of hipsters drinking coffee)</li>
+            </ul>
+            <h3 id="well-guess-what-motherfucker">Well guess what, motherfucker:</h3>
+            <p>You. Are. Over-designing. Look at this shit. It's a motherfucking website. Why the fuck do you need to animate a fucking trendy-ass banner flag when I hover over that useless piece of shit? You spent hours on it and added 80 kilobytes to your fucking site, and some motherfucker jabbing at it on their iPad with fat sausage fingers will never see that shit. Not to mention blind people will never see that shit, but they don't see any of your shitty shit.</p>
+            <p>You never knew it, but this is your perfect website. Here's why.</p>
+            <h2 id="its-fucking-lightweight">It's fucking lightweight</h2>
+            <p>This entire page weighs less than the gradient-meshed facebook logo on your fucking Wordpress site. Did you seriously load 100kb of jQuery UI just so you could animate the background color of a div? You loaded all 7 fontfaces of a shitty webfont just so you could say "Hi." at 100px height at the beginning of your site? You piece of shit.</p>
+            <h2 id="its-responsive">It's responsive</h2>
+            <p>You dumbass. You thought you needed media queries to be responsive, but no. Responsive means that it responds to whatever motherfucking screensize it's viewed on. This site doesn't care if you're on an iMac or a motherfucking Tamagotchi.</p>
+            <h2 id="it-fucking-works">It fucking works</h2>
+            <p>Look at this shit. You can read it ... that is, if you can read, motherfucker. It makes sense. It has motherfucking hierarchy. It's using HTML5 tags so you and your bitch-ass browser know what the fuck's in this fucking site. That's semantics, motherfucker.</p>
+            <p>It has content on the fucking screen. Your site has three bylines and link to your dribbble account, but you spread it over 7 full screens and make me click some bobbing button to show me how cool the jQuery ScrollTo plugin is.</p>
+            <p>Cross-browser compatibility? Load this motherfucker in IE6. I fucking dare you.</p>
+            <h2 id="this-is-a-website">This is a website. Look at it. You've never seen one before.</h2>
+            <p>Like the man who's never grown out his beard has no idea what his true natural state is, you have no fucking idea what a website is. All you have ever seen are shitty skeuomorphic bastardizations of what should be text communicating a fucking message. This is a real, naked website. Look at it. It's fucking beautiful.</p>
+            <h3 id="yes-this-is-fucking-satire">Yes, this is fucking satire, you fuck</h3>
+            <p>I'm not actually saying your shitty site should look like this. What I'm saying is that all the problems we have with websites are <strong>ones we create ourselves</strong>. Websites aren't broken by default, they are functional, high-performing, and accessible. You break them. You son-of-a-bitch.</p>
+            <blockquote cite="https://www.vitsoe.com/us/about/good-design">"Good design is as little design as possible."<br>- some German motherfucker</blockquote>
+            <hr>
+            <h2 id="epilogue">Epilogue</h2>
+            <p>Inspired by the geniuses behind <a href="http://motherfuckingwebsite.com/">motherfuckingwebsite.com</a> and <a href="http://txti.es/">txti</a>.</p>
+            <p>This page—that isn't a total fucking eyesore—was created by <a href="https://twitter.com/drew_mc">me</a> with help from <a href="https://twitter.com/gabehammersmith">him</a>.</p>
+        </main>
+    </div>
+    <script>
+        const header = document.querySelector('header');
+        const container = document.querySelector('.container');
+        const nav = document.querySelector('nav');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        const compare = document.querySelector('.compare');
+        const input = document.querySelector('.compare__input');
+        const toggleDebug = document.querySelector('.toggle-debug');
+        let lastScrollTop = 0;
+        let isScrolling;
+        let isNavigating = false;
+
+        // Dynamically set --header-height
+        function updateHeaderHeight() {
+            const headerHeight = header.offsetHeight;
+            document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+        }
+        updateHeaderHeight();
+        window.addEventListener('resize', updateHeaderHeight);
+
+        // Handle TOC link clicks
+        tocLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isNavigating = true;
+                header.classList.add('hidden');
+                container.classList.add('header-hidden');
+                nav.classList.add('header-hidden');
+                setTimeout(() => {
+                    lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    isNavigating = false;
+                }, 500);
+            });
+        });
+
+        // Handle scroll behavior
+        window.addEventListener('scroll', () => {
+            if (isNavigating) return;
+
+            clearTimeout(isScrolling);
+            isScrolling = setTimeout(() => {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+
+                if (currentScrollTop <= 0) {
+                    // At absolute top: ease in
+                    header.classList.remove('hidden');
+                    container.classList.remove('header-hidden');
+                    nav.classList.remove('header-hidden');
+                } else if (currentScrollTop > lastScrollTop || currentScrollTop + windowHeight >= documentHeight) {
+                    // Scrolling down or at absolute bottom: ease out
+                    header.classList.add('hidden');
+                    container.classList.add('header-hidden');
+                    nav.classList.add('header-hidden');
+                }
+
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }, 50);
+        });
+    </script>
+    <script>
+        // ----- IMAGE COMPARISON SLIDER ----- //
+
+const $compare = document.querySelector(".compare");
+const $input = document.querySelector(".compare input");
+
+$input.addEventListener("input", () => {
+  $compare.style.setProperty("--mask-width", `${$input.value}%`);
+});
+
+$compare.style.setProperty("--mask-width", `${$input.value}%`);
+
+// ----- DEBUG STUFF ----- //
+
+const $toggleDebug = document.querySelector(".toggle-debug");
+
+const removeOverflow = () => {
+  $compare.style.removeProperty("overflow");
+};
+
+$toggleDebug.addEventListener("click", () => {
+  document.body.classList.toggle("debug");
+});
+
+    </script>
+</body>
 </html>
