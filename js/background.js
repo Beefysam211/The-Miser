@@ -13,7 +13,7 @@ const l = [],
 let g = !1;
 function h() {
   n.save(),
-    (n.fillStyle = g ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)"),
+    (n.fillStyle = g ? "rgb(0, 0, 0)" : "rgb(238, 238, 238)"),
     n.fillRect(0, 0, t, o),
     n.restore();
 }
@@ -21,8 +21,8 @@ function u() {
   let e, m, h, u, k, w, y, M, L, b, v, E, S, I, z, p;
   n.save(),
     g
-      ? ((n.fillStyle = "rgb(15, 15, 15)"), (n.strokeStyle = "rgb(249, 247, 241)"))
-      : ((n.fillStyle = "rgb(249, 247, 241)"), (n.strokeStyle = "rgb(15, 15, 15)")),
+      ? ((n.fillStyle = "rgba(0, 0, 0, 1)"), (n.strokeStyle = "rgb(238, 238, 238)"))
+      : ((n.fillStyle = "rgb(238, 238, 238)"), (n.strokeStyle = "rgb(29, 27, 30)")),
     n.fillRect(0, 0, t, o),
     n.restore(),
     (n.strokeStyle = g ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)"),
