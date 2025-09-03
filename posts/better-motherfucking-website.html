@@ -4,7 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel=icon href=/img/favicon/S-cool.svg sizes="any" type=image/svg+xml>  <title>Better Motherfucking Website</title>
+  <link rel=icon href=/img/favicon/S-cool.svg sizes="any" type=image/svg+xml>  
+  <title>Better Motherfucking Website</title>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-v22-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-mono-v19-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-mono-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     /* ibm-plex-serif-regular - latin */
     @font-face {
@@ -723,6 +732,57 @@
     }
 }
 
+.fancyPositioning .picture-left {
+  float: right;
+  width: 40%;
+  overflow: hidden;
+  margin-left: 1em;
+}
+
+.fancyPositioning .picture-left figure {
+  margin: 10px;
+}
+
+.fancyPositioning .picture-left figure figcaption {
+  font-size: .68em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+div.fancyPositioning div.picture-left img {
+  width: 100%;
+}
+
+menu {
+  display: inline;
+  text-align: right;
+  list-style-type: none;
+  padding-left: 56%;
+  padding-right: 20px;
+}
+
+menu li {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: inline;
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width:500px) {
+
+  div.fancyPositioning div.picture-left,
+  div.fancyPositioning div.tleft {
+    float:none;
+    width:inherit;
+    margin-left: 0em;
+  }
+  menu {
+    display: inline-block;
+    text-align: center;
+    padding-left: 0%;
+  }
+}
+
   </style>
 </head>
 
@@ -730,15 +790,21 @@
   <header>
     <h1 id="this-is-still-a-motherfucking-website"><a href="/">This is <em>still</em> a motherfucking website<span class="cursor">.</span></a></h1>
     <aside>And it's more fucking perfect than the last guy's.</aside>
+    <menu>
+      <li>Tags</li>
+      <li>Posts</li>
+      <li>Notes</li>
+      <li>Search</li>
+    </menu>
   </header>
   <div class="container">
     <nav>
       <h2 class="visually-hidden">Table of Contents</h2>
       <h2>Table of Contents</h2>
       <ul class="toc-list">
-        <li><a href="#this-is-still-a-motherfucking-website"><span class="title">1. This is still a motherfucking
+        <li><a href="#"><span class="title">1. This is still a motherfucking
               website.<span class="leaders" aria-hidden="true"></span></span><span class="page"><span
-                class="visually-hidden">Page </span>1</span></a></li>
+                class="visually-hidden">Page </span></span></a></li>
         <li><a href="#seriously-it-takes-minimal-effort"><span class="title">Seriously, it takes minimal fucking effort
               to improve this shit.<span class="leaders" aria-hidden="true"></span></span><span class="page"><span
                 class="visually-hidden">Page </span>1</span></a>
@@ -827,10 +893,10 @@
 
       <hr>
       <div class="compare" style="overflow: visible;">
-        <img class="compare__image-one" src="https://muffinman.io/blog/image-comparison-slider/letters-01.jpg">
+        <img class="compare__image-one" src="https://muffinman.io/blog/image-comparison-slider/letters-01.jpg" loading="lazy">
 
         <div class="compare__mask">
-          <img class="compare__image-two" src="https://muffinman.io/blog/image-comparison-slider/letters-02.png">
+          <img class="compare__image-two" src="https://muffinman.io/blog/image-comparison-slider/letters-02.png" loading="lazy">
         </div>
 
         <div class="compare__separator">
@@ -906,6 +972,23 @@
       <p>Like the man who's never grown out his beard has no idea what his true natural state is, you have no fucking
         idea what a website is. All you have ever seen are shitty skeuomorphic bastardizations of what should be text
         communicating a fucking message. This is a real, naked website. Look at it. It's fucking beautiful.</p>
+              <div class="fancyPositioning">
+        <div class="picture-left">
+          <figure>
+            <img src="https://thebestmotherfucking.website/static/e84d13374f0772372eaa86614800bd58.jpg" title="A nice and cute cat" alt="white and gray cat looking at you, with his yellow and green eyes">
+            <figcaption>A cat, just to keep the context of the website.</figcaption>
+          </figure>
+        </div>
+        <div class="tleft">
+          <p> We're not looking at a novel by Stephenie Meyer, this is a
+            <span class="mfw">motherfuckingwebsite</span>.
+        Add some relevant pictures to give a little bit of context, or to cheer up the reader.
+        Do you really like to waste the power of technology that we have nowadays? Come on, you're using a
+        web browser on a computer, you're not reading a book on a Kindle.</p>
+        <p>The website shouldn't be overfilled with pictures, but it should make the user happy while reading your nonsense words.</p>
+        <p>You see the picture of this cute cat? He's happy, and you should be too.</p>
+      </div>
+    </div>
       <h3 id="yes-this-is-fucking-satire">Yes, this is fucking satire, you fuck</h3>
       <p>I'm not actually saying your shitty site should look like this. What I'm saying is that all the problems we
         have with websites are <strong>ones we create ourselves</strong>. Websites aren't broken by default, they are
@@ -1005,7 +1088,7 @@
     });
 
   </script>
-  
+
 </body>
 
 </html>
