@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel=icon href=/img/favicon/S-cool.svg sizes="any" type=image/svg+xml>  
+  <link rel=icon href=/img/favicon/S-cool.svg sizes="any" type=image/svg+xml>
   <title>Better Motherfucking Website</title>
   <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/ibm-plex-serif-v19-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -153,7 +153,7 @@
     }
 
     header h1 a:hover {
-      color: #FF871F;
+      color: rgba(100, 170, 255, 0.9);
       /* Orange hover color */
     }
 
@@ -716,7 +716,7 @@
       }
     }
 
-.cursor {
+/*.cursor {
     animation: blink 1s infinite;
     background-color: #FF871F;
     width: 0.25rem;
@@ -730,7 +730,7 @@
     50% {
         background-color: #FF871F;
     }
-}
+}*/
 
 .fancyPositioning .picture-left {
   float: right;
@@ -783,12 +783,138 @@ menu li {
   }
 }
 
+/* === Ellipsis spinner (your CSS) === */
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
+}
+.compare__loader {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* lets clicks pass through while fading */
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
+  border-radius: 50%;
+  background: #333;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+@keyframes lds-ellipsis3 {
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@keyframes lds-ellipsis2 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(24px, 0); }
+}
+
+.picture-left {
+  position: relative;           /* important: makes the loader position correctly */
+  display: inline-block;        /* or block, whatever your layout uses */
+}
+
+.picture-left__loader {
+  position: absolute;
+  inset: 0;
+  /*background: rgba(255, 255, 255, 0.9);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+@layer components {
+  .circled-text {
+    --circled-color: rgb(0, 102, 255);        /* bright blue for light mode */
+    --circled-padding: -0.5ch;
+
+    position: relative;
+    color: #1D1B1E;
+    white-space: nowrap;
+    isolation: isolate;                      /* required for mix-blend-mode */
+    background: none;
+  }
+
+  .circled-text span {
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+  }
+
+  /* Dark mode → switch to a lighter blue that works with screen blend */
+  @media (prefers-color-scheme: dark) {
+    .circled-text {
+      --circled-color: rgba(100, 170, 255, 0.9);   /* soft light-blue */
+    }
+    .circled-text span {
+      mix-blend-mode: screen;
+      opacity: 0.7;
+    }
+  }
+
+  .circled-text span::before,
+  .circled-text span::after {
+    content: "";
+    position: absolute;
+    inset: var(--circled-padding);
+    border: 2.5px solid var(--circled-color);
+  }
+
+  .circled-text span::before {
+    border-inline-end: none;
+    border-radius: 100% 0 0 75% / 50% 0 0 50%;
+    inset-block-start: calc(var(--circled-padding) / 2);
+    inset-inline-end: 50%;
+  }
+
+  .circled-text span::after {
+    border-inline-start: none;
+    border-radius: 0 100% 75% 0 / 0 50% 50% 0;
+    inset-inline-start: 30%;
+  }
+}
+
   </style>
 </head>
 
 <body>
   <header>
-    <h1 id="this-is-still-a-motherfucking-website"><a href="/">This is <em>still</em> a motherfucking website<span class="cursor">.</span></a></h1>
+    <h1 id="this-is-still-a-motherfucking-website"><a href="/">This is <em>still</em> a motherfucking website.</a></h1>
     <aside>And it's more fucking perfect than the last guy's.</aside>
     <menu>
       <li>Tags</li>
@@ -857,11 +983,12 @@ menu li {
 
     <main>
 
-      <h2 id="seriously-it-takes-minimal-effort">Seriously, it takes minimal fucking effort to improve this shit.</h2>
+      <h2 id="seriously-it-takes-minimal-effort">Seriously, it takes <mark class="circled-text"><span></span>minimal</mark> fucking effort to improve this shit.</h2>
       <p><strong>7 fucking declarations.</strong></p>
-      <p>That's how much CSS it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a>
+      <p>That's how much <mark class="circled-text"><span></span>CSS</mark> it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a>
         into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the
-        original perfect-ass website:</p>
+        original perfect-ass website:
+      </p>
       <ul>
         <li>Shit's <em>still</em> lightweight and loads fast</li>
         <li><em>Still</em> fits on all your shitty screens</li>
@@ -892,23 +1019,28 @@ menu li {
         type works well for print, not the screen.</p>
 
       <hr>
-      <div class="compare" style="overflow: visible;">
-        <img class="compare__image-one" src="https://muffinman.io/blog/image-comparison-slider/letters-01.jpg" loading="lazy">
+      <div class="compare" style="--mask-width: 50%">
+        <!-- Loader (spinner) -->
+        <div class="compare__loader" id="loader">
+          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <img class="compare__image-one" src="https://muffinman.io/blog/image-comparison-slider/letters-01.jpg" width="" height=""  alt="Before">
 
         <div class="compare__mask">
-          <img class="compare__image-two" src="https://muffinman.io/blog/image-comparison-slider/letters-02.png" loading="lazy">
+          <img class="compare__image-two" src="https://muffinman.io/blog/image-comparison-slider/letters-02.png" width="" height=""  alt="After">
         </div>
 
         <div class="compare__separator">
-
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="compare__icon" viewBox="0 0 16 16">
             <path d="M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14" stroke="currentColor"></path>
           </svg>
         </div>
 
         <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
-
       </div>
+
+
 
       <div class="text">
         <button class="toggle-debug">Toggle debug</button>
@@ -973,12 +1105,23 @@ menu li {
         idea what a website is. All you have ever seen are shitty skeuomorphic bastardizations of what should be text
         communicating a fucking message. This is a real, naked website. Look at it. It's fucking beautiful.</p>
               <div class="fancyPositioning">
-        <div class="picture-left">
-          <figure>
-            <img src="https://thebestmotherfucking.website/static/e84d13374f0772372eaa86614800bd58.jpg" title="A nice and cute cat" alt="white and gray cat looking at you, with his yellow and green eyes">
-            <figcaption>A cat, just to keep the context of the website.</figcaption>
-          </figure>
-        </div>
+                <div class="picture-left">
+                  <!-- Loader overlay (same spinner you already love) -->
+                  <div class="picture-left__loader">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                  </div>
+
+                  <figure>
+                    <img
+                      src="https://thebestmotherfucking.website/static/e84d13374f0772372eaa86614800bd58.jpg"
+                      title="A nice and cute cat"
+                      alt="White and gray cat looking at you, with his yellow and green eyes"
+                      width=""
+                      height=""
+                      loading="lazy">
+                    <figcaption>A cat, just to keep the context of the website.</figcaption>
+                  </figure>
+                </div>
         <div class="tleft">
           <p> We're not looking at a novel by Stephenie Meyer, this is a
             <span class="mfw">motherfuckingwebsite</span>.
@@ -1064,29 +1207,70 @@ menu li {
     });
   </script>
   <script>
-    // ----- IMAGE COMPARISON SLIDER ----- //
+      // ----- IMAGE COMPARISON SLIDER ----- //
+      const $compare = document.querySelector(".compare");
+      const $input   = document.querySelector(".compare input");
+      const $loader  = $compare.querySelector(".compare__loader"); // ← our spinner overlay
 
-    const $compare = document.querySelector(".compare");
-    const $input = document.querySelector(".compare input");
+      // Hide loader once BOTH images are fully loaded
+      let imagesLoaded = 0;
+      const totalImages = 2;
 
-    $input.addEventListener("input", () => {
+      function tryHideLoader() {
+          imagesLoaded++;
+          if (imagesLoaded === totalImages) {
+              $loader.style.opacity = '0';
+              // Optional: completely remove it from DOM after fade-out
+              setTimeout(() => $loader.style.display = 'none', 500);
+          }
+      }
+
+      // Check both images
+      $compare.querySelectorAll('img').forEach(img => {
+          if (img.complete && img.naturalWidth !== 0) {
+              tryHideLoader(); // already cached
+          } else {
+              img.addEventListener('load', tryHideLoader);
+              img.addEventListener('error', tryHideLoader); // hide even if one fails
+          }
+      });
+
+      // Slider functionality (unchanged)
+      $input.addEventListener("input", () => {
+          $compare.style.setProperty("--mask-width", `${$input.value}%`);
+      });
       $compare.style.setProperty("--mask-width", `${$input.value}%`);
-    });
 
-    $compare.style.setProperty("--mask-width", `${$input.value}%`);
+      // ----- DEBUG STUFF ----- //
+      const $toggleDebug = document.querySelector(".toggle-debug");
+      const removeOverflow = () => {
+          $compare.style.removeProperty("overflow");
+      };
+      if ($toggleDebug) {
+          $toggleDebug.addEventListener("click", () => {
+              document.body.classList.toggle("debug");
+          });
+      }
+  </script>
 
-    // ----- DEBUG STUFF ----- //
+  <script>
+  document.querySelectorAll('.picture-left img, .compare img').forEach(img => {
+    const loader = img.closest('.picture-left, .compare')?.querySelector('.picture-left__loader, .compare__loader');
 
-    const $toggleDebug = document.querySelector(".toggle-debug");
+    function hideLoader() {
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    }
 
-    const removeOverflow = () => {
-      $compare.style.removeProperty("overflow");
-    };
-
-    $toggleDebug.addEventListener("click", () => {
-      document.body.classList.toggle("debug");
-    });
-
+    if (img.complete && img.naturalWidth !== 0) {
+      hideLoader();                     // already cached
+    } else {
+      img.onload = hideLoader;
+      img.onerror = hideLoader;         // hide even if image fails
+    }
+  });
   </script>
 
 </body>
